@@ -6,10 +6,10 @@
 	"prefix": "cotc", 
 	"main_file": "main.lua",
 	"priority" : 0,
-	"badge_colour": "FF0000",
-	"badge_text_colour": "000000",
-	"display_name": "Cult Of The Cards", 
-	"version": "0.0.1-ALPHA", 
+	"badge_colour": "333333",
+	"badge_text_colour": "FF0000",
+	"display_name": "Cult Cards", 
+	"version": "0.0.2-ALPHA", 
 	"dependencies": [
 		"Steamodded (>=1.0.0~BETA-1224a)",
 		"Lovely (>=0.9)"
