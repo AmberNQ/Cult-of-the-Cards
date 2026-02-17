@@ -9,9 +9,10 @@
 	"badge_colour": "333333",
 	"badge_text_colour": "FF0000",
 	"display_name": "Cult Cards", 
-	"version": "0.0.2-ALPHA", 
+	"version": "0.0.3-ALPHA", 
 	"dependencies": [
 		"Steamodded (>=1.0.0~BETA-1224a)",
-		"Lovely (>=0.9)"
+		"Lovely (>=0.9)",
+		"slime_utils (>=1.0)"
 	]
 }

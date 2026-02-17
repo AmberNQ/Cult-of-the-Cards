@@ -4,60 +4,73 @@ return {
         Blind = {
             bl_cotc_leshy = {
                 name = "Chaos",
-                description = {
+                text = {
                     "idk yet"
                 }
             },
             bl_cotc_heket = {               --sets hand level to 1
                 name = "Famine",
-                description = {
+                text = {
                     "Nullifies level of",
                     "played poker hand"
                 }
             },
             bl_cotc_kallamar = {
                 name = "Pestilence",
-                description = {
+                text = {
                     "Discarding uses",
                     "one hand"
                 }
             },
             bl_cotc_shamura = {
                 name = "War",
-                description = {
+                text = {
                     "Only play face cards",
                     "of the same suit"
                 }
             },
             bl_cotc_narinder = {
                 name = "Death",
-                description = {
+                text = {
                     "Scored cards",
                     "are destroyed"
                 }
             },
             bl_cotc_hagar = {
                 name = "Executioner",
-                description = {
-                    ""
+                text = {
+                    "Please... spare me..."
                 }
             },
             bl_cotc_marchosias = {
                 name = "Scientist",
-                description = {
+                text = {
                     ""
                 }
             },
             bl_cotc_yngya = {
                 name = "Frost",
-                description = {
+                text = {
                     ""
                 }
             }
         },
         Edition = {},
         Enhanced = {},
-        Joker = {},
+        Joker = {
+            j_cotc_lamb = {
+                name = "The Lamb",
+                text = {
+                    "idk yet"
+                }
+            },
+            j_cotc_leshy = {
+                name = "Leshy",
+                text = {
+                    "idk yet"
+                }
+            }
+        },
         Other = {},
         Planet = {},
         Spectral = {},

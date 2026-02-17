@@ -51,6 +51,17 @@ local jokers = {
 local tarots = {
 }
 
+local blinds = {
+	"leshy",
+	"heket",
+	"kallamar",
+	"shamura",
+	"narinder",
+	"hagar",
+	"marchosias",
+	"yngya"
+} 
+
 -- File Loader --
 
 for i, v in ipairs(files) do
@@ -63,6 +74,10 @@ end
 
 for i, v in ipairs(tarots) do
 	assert(SMODS.load_file("lua/tarots/"..v..".lua"))()
+end
+
+for i, v in ipairs(blinds) do
+	assert(SMODS.load_file("lua/blinds/"..v..".lua"))()
 end
 
 -- =====================ATLASES=====================
@@ -81,11 +96,44 @@ SMODS.Atlas {
     py = 95
 }
 
+SMODS.Atlas {
+    key = "blind",
+    path = "blinds.png",
+    px = 34,
+	py = 34,
+	atlas_table = 'ANIMATION_ATLAS',
+	frames = 21
+}
+
+-- ======================BADGES======================
+
 cotc_badges = {
-	["DW"] = function() return create_badge("Darkwood", HEX('007700'), G.C.WHITE, 0.8 ) end,
-	["AN"] = function() return create_badge("Anura", HEX('FFAE00'), G.C.WHITE, 0.8 ) end,
-	["AD"] = function() return create_badge("Anchordeep", HEX('0033FF'), G.C.WHITE, 0.8 ) end,
-	["SC"] = function() return create_badge("Silk Cradle", HEX('550099'), G.C.WHITE, 0.8 ) end,
-	["EF"] = function() return create_badge("Ewefall", HEX('0095FF'), G.C.WHITE, 0.8 ) end,
-	["TR"] = function() return create_badge("The Rot", HEX('990000'), G.C.WHITE, 0.8 ) end
+	DW = {
+		text = "Darkwood",
+		colour = HEX('007700')
+	},
+	AN = {
+		text = "Anura",
+		colour = HEX('FFAE00')
+	},
+	AD = {
+		text = "Anchordeep",
+		colour = HEX('0033FF')
+	},
+	SC = {
+		text = "Silk Cradle",
+		colour = HEX('550099')
+	},
+	WH = {
+		text = "Woolhaven",
+		colour = HEX('007BFF')
+	},
+	EF = {
+		text = "Ewefall",
+		colour = HEX('0095FF')
+	},
+	TR = {
+		text = "The Rot",
+		colour = HEX('990000')
+	}
 }

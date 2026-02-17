@@ -2,8 +2,9 @@
 By Alpha N. Q.
 
 Requirements:
-- Steamodded (>=1.0.0-beta-1224a)
-- Lovely (>=0.9)
+- [Steamodded (>=1.0.0~BETA-1224a)](https://github.com/Steamodded/smods)
+- [Lovely (>=0.9)](https://github.com/ethangreen-dev/lovely-injector)
+- [slimeutils (>=1.0)](https://github.com/ellestuff/slimeutils)
 
 *Praise the Lamb, conduit to great power, promised liberator of the One Who Waits below.*
 
