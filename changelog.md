@@ -13,3 +13,12 @@
 - Updated card badges.
 
 - Updated mod requirements.
+
+## V 0.0.4-ALPHA
+
+- Added Achievement names, descriptions and triggers.
+
+- Added custom Achievement art. [STILL IN PROGRESS]
+
+- Finished The Executioner
+  - Win by scored *less* than minimum.

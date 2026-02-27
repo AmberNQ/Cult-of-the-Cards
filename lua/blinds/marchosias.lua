@@ -4,7 +4,7 @@ SMODS.Blind{
     pos = { y = 6 },
     discovered = false,
     boss = { showdown = true },
-    boss_colour = HEX('14C2EA'),
+    boss_colour = HEX('4F636E'),
     mult = 2,
     dollars = 8,
     debuff = { nominal = 11 }

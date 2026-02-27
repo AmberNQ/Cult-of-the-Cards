@@ -5,7 +5,8 @@ return {
             bl_cotc_leshy = {
                 name = "Chaos",
                 text = {
-                    "idk yet"
+                    "Hand gets reshuffled",
+                    "after each played hand"
                 }
             },
             bl_cotc_heket = {               --sets hand level to 1
@@ -32,12 +33,13 @@ return {
             bl_cotc_narinder = {
                 name = "Death",
                 text = {
-                    "Scored cards",
-                    "are destroyed"
+                    "1 in 4 held cards get",
+                    "destroyed after each",
+                    "played hand"
                 }
             },
             bl_cotc_hagar = {
-                name = "Executioner",
+                name = "The Executioner",
                 text = {
                     "Please... spare me..."
                 }
@@ -45,13 +47,14 @@ return {
             bl_cotc_marchosias = {
                 name = "Scientist",
                 text = {
-                    ""
+                    "idk yet"
                 }
             },
             bl_cotc_yngya = {
                 name = "Frost",
                 text = {
-                    ""
+                    "held cards",
+                    "slowly freeze"
                 }
             }
         },
@@ -80,8 +83,27 @@ return {
         Voucher = {},
     },
     misc = {
-        achievement_descriptions = {},
-        achievement_names = {},
+        achievement_descriptions = {
+            ach_cotc_cold_hearted = "Show no mercy...",
+            ach_cotc_cure = "Defeat Pestilence without using discards.",
+            ach_cotc_godhood = {
+                "No longer a servant,",
+                "no less than a God."
+            },
+            ach_cotc_order = "Defeat Chaos without using discards.",
+            ach_cotc_peace = "Defeat War without using discards.",
+            ach_cotc_sate = "Defeat Famine without using discards.",
+            ach_cotc_sins_forgiven = "Absolve The Executioner."
+        },
+        achievement_names = {
+            ach_cotc_cold_hearted = "Cold Hearted",
+            ach_cotc_cure = "Cure",
+            ach_cotc_godhood = "Godhood",
+            ach_cotc_order = "Order",
+            ach_cotc_peace = "Peace",
+            ach_cotc_sate = "Sate",
+            ach_cotc_sins_forgiven = "Thy Sins Forgiven"
+        },
         blind_states = {},
         challenge_names = {},
         collabs = {},
@@ -89,7 +111,8 @@ return {
             cotc_credits_label = "Credits",
             cotc_credits_developer = "Developed By: ",
             cotc_credits_programminghelp = "Assistant Programmer: ",
-            cotc_credits_specialthanks = "Playtesters: "
+            cotc_credits_specialthanks = "Playtesters: ",
+            ph_cotc_saved = "What kind of God are you...?",
         },
         high_scores = {},
         labels = {},

@@ -1,3 +1,16 @@
+--[[TO DO LIST
+
+- Add Godhood achievement unlock							[🔃]
+
+- Rebalance as necessary
+
+----   NOTES   ----
+
+---- BUG FIXES ----
+
+- Nothing to do!! :D
+]]
+
 -- ====================META=DATA====================
 
 -- Credits Tab --
@@ -37,15 +50,15 @@ function G.FUNCS.alpha_youtube(e) love.system.openURL("https://www.youtube.com/@
 
 function G.FUNCS.alpha_github(e) love.system.openURL("https://github.com/AlphaNQ") end
 
-
 -- File Indexes --
 
-local files = {
-	--"config",
+local misc = {
+	"achievements",
+	--"config"
 }
 
 local jokers = {
-    "lamb",
+    --"lamb",
 }
 
 local tarots = {
@@ -64,10 +77,6 @@ local blinds = {
 
 -- File Loader --
 
-for i, v in ipairs(files) do
-	assert(SMODS.load_file("lua/"..v..".lua"))()
-end
-
 for i, v in ipairs(jokers) do
 	assert(SMODS.load_file("lua/jokers/"..v..".lua"))()
 end
@@ -78,6 +87,10 @@ end
 
 for i, v in ipairs(blinds) do
 	assert(SMODS.load_file("lua/blinds/"..v..".lua"))()
+end
+
+for i, v in ipairs(misc) do
+	assert(SMODS.load_file("lua/misc/"..v..".lua"))()
 end
 
 -- =====================ATLASES=====================
@@ -103,6 +116,13 @@ SMODS.Atlas {
 	py = 34,
 	atlas_table = 'ANIMATION_ATLAS',
 	frames = 21
+}
+
+SMODS.Atlas {
+    key = "achieve",
+    path = "achievements.png",
+    px = 66,
+    py = 66
 }
 
 -- ======================BADGES======================

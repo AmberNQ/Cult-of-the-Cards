@@ -7,5 +7,9 @@ SMODS.Blind{
     boss_colour = HEX('8620B5'),
     mult = 2,
     dollars = 8,
-    debuff = { nominal = 11 }
+    defeat = function(self)
+        if G.GAME.current_round.discards_used == 0 then
+            check_for_unlock({ type = "cotc_peace_unlock" })
+        end
+    end
 }
