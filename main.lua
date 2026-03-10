@@ -4,7 +4,10 @@
 
 - Rebalance as necessary
 
-----   NOTES   ----
+----   IDEAS   ----
+
+- Add a Knucklebones consumeable card
+	- play a game of knucklebones against the current blind, if you win, adds X5 mult to your next hand.
 
 ---- BUG FIXES ----
 
@@ -13,48 +16,101 @@
 
 -- ====================META=DATA====================
 
--- Credits Tab --
+-- Main Mod Tab --
 
-SMODS.current_mod.extra_tabs = function()
-	return {
-		label = localize("cotc_credits_label"),
-		tab_definition_function = function()
-			return {
-				n = G.UIT.ROOT, config = { r = 0.5, align = "cm", padding = 0.2, colour = G.C.BLACK }, nodes = {
-					{ n = G.UIT.R, config = { padding = 0, align = "cl" }, nodes = { 
-						{ n = G.UIT.T, config = { text = localize("cotc_credits_developer"), shadow = true, scale = 0.6 } },
-						{ n = G.UIT.T, config = { text = "Alpha N. Q.", shadow = true, scale = 0.6, colour = G.C.BLUE } } 
-					} }, 
-					--[[{ n = G.UIT.R, config = { padding = 0, align = "cl", scale = 0.5 }, nodes = {
-						{ n = G.UIT.T, config = { text = localize("cotc_credits_programminghelp"), shadow = true, scale = 0.45 } },
-						{ n = G.UIT.T, config = { text = "slimestuff.", shadow = true, scale = 0.45, colour = G.C.BLUE } } 
-					} },
-					{ n = G.UIT.R, config = { padding = 0, align = "cl", scale = 0.1 }, nodes = {
-						{ n = G.UIT.T, config = { text = localize("cotc_credits_specialthanks"), shadow = true, scale = 0.45 } },
-						{ n = G.UIT.T, config = { text = "Slyvie, xCred_64", shadow = true, scale = 0.45, colour = G.C.BLUE } } 
-					} },]]
-					{ n = G.UIT.R, config = { padding = 0.2, align = "cm" }, nodes = {
-						UIBox_button{ minw = 3.85, colour = HEX("009DFF"), button = "alpha_bsky", label = {"BlueSky"} },
-						UIBox_button{ minw = 3.85, colour = HEX("FF0000"), button = "alpha_youtube", label = {"YouTube"} },
-						UIBox_button{ minw = 3.85, colour = HEX("334096"), button = "alpha_github", label = {"Github"} }
-					} } 
-				}
-			}
-		end
-	}
+SMODS.current_mod.custom_ui = function(mod_nodes)
+	mod_nodes = EMPTY(mod_nodes)
+	
+	mod_nodes[#mod_nodes+1] = { n = G.UIT.C, config = {
+		padding = 0.1
+	}, nodes = {
+		{ n = G.UIT.R, config = {
+			align = "cm"
+		}, nodes = {
+			{ n = G.UIT.R, config = {
+				r = 0.1,
+				align = "cm",
+				padding = 0.1,
+				colour = G.ARGS.LOC_COLOURS.crimson
+			}, nodes = {
+				{ n = G.UIT.C, config = {
+					r = 0.1,
+					align = "cm",
+					padding = 0.2,
+					colour = G.C.BLACK
+				}, nodes = {
+					{ n = G.UIT.T, config = {
+						text = "Cult of the Cards",
+						scale = .75,
+						colour = G.C.WHITE
+					} }
+				} }
+			} }
+		} },
+		{ n = G.UIT.R, config = {
+			align = "cm"
+		}, nodes = {
+			{ n = G.UIT.R, config = {
+				align = "cm"
+			}, nodes = {
+				{ n = G.UIT.R, config = {
+					emboss = 0.05,
+					r = 0.1,
+					minw = 6,
+					minh = 2.4,
+					align = "cm",
+					padding = 0.1,
+					colour = G.C.L_BLACK
+				}, nodes = {
+					{ n = G.UIT.C, config = {
+						align = "cm",
+						padding = 0.3,
+						minw = 4
+					}, nodes = {
+						{ n = G.UIT.R, config = { align = "cm", }, nodes = {
+							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.T, config = {
+									text = "Praise the Lamb, conduit to great power,",
+									scale = .4,
+									colour = G.C.WHITE
+								} },
+							} },
+							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.T, config = {
+									text = "promised liberator of the One Who Waits below.",
+									scale = .4,
+									colour = G.C.WHITE
+								} }
+							} },
+						} },
+						{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.T, config = {
+									text = "Yet sacrificial beast, take heed; for a Crown",
+									scale = .4,
+									colour = G.C.WHITE
+								} },
+							} },
+							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+								{ n = G.UIT.T, config = {
+									text = "cannot sit upon two brows.",
+									scale = .4,
+									colour = G.C.WHITE
+								} }
+							} }
+						} }
+					} }
+				} }
+			} }
+		} }	
+	} }
 end
-
-function G.FUNCS.alpha_bsky(e) love.system.openURL("https://bsky.app/profile/alphaanimates.bsky.social") end
-
-function G.FUNCS.alpha_youtube(e) love.system.openURL("https://www.youtube.com/@AlphaAnimatez") end
-
-function G.FUNCS.alpha_github(e) love.system.openURL("https://github.com/AlphaNQ") end
 
 -- File Indexes --
 
 local misc = {
 	"achievements",
-	--"config"
+	"config"
 }
 
 local jokers = {
@@ -93,11 +149,23 @@ for i, v in ipairs(misc) do
 	assert(SMODS.load_file("lua/misc/"..v..".lua"))()
 end
 
+-- Text Colours --
+
+loc_colour('red')
+G.ARGS.LOC_COLOURS['crimson'] = HEX('900000')
+
 -- =====================ATLASES=====================
 
 SMODS.Atlas {
     key = "modicon",
     path = "modicon.png",
+    px = 32,
+    py = 32
+}
+
+SMODS.Atlas {
+    key = "iconalt",
+    path = "modicon_alt.png",
     px = 32,
     py = 32
 }

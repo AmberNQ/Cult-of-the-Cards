@@ -8,6 +8,13 @@ SMODS.Blind{
     mult = 0.5,
     dollars = 5,
 
+    in_pool = function(self, args)
+        if not SMODS.Mods["cultofcards"].config.dlc_toggle then
+            return false
+        end
+        return true
+    end,
+
     calculate = function(self, blind, context)
         if context.end_of_round and context.game_over then
             G.E_MANAGER:add_event(Event({

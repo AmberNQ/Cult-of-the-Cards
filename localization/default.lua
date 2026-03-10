@@ -24,7 +24,7 @@ return {
                 }
             },
             bl_cotc_shamura = {
-                name = "War",
+                name = "Conquest",
                 text = {
                     "Only play face cards",
                     "of the same suit"
@@ -45,7 +45,7 @@ return {
                 }
             },
             bl_cotc_marchosias = {
-                name = "Scientist",
+                name = "Mad Scientist",
                 text = {
                     "idk yet"
                 }
@@ -53,8 +53,8 @@ return {
             bl_cotc_yngya = {
                 name = "Frost",
                 text = {
-                    "held cards",
-                    "slowly freeze"
+                    "1 in 2 held cards",
+                    "will freeze"
                 }
             }
         },

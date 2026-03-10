@@ -22,3 +22,11 @@
 
 - Finished The Executioner
   - Win by scored *less* than minimum.
+
+## V 0.0.5-ALPHA
+
+- Updated the README file for added flare and description
+
+- Updated the name and description of a couple Blinds
+
+- Added toggle functionality to DLC blinds. this currently does not stop them from appearing in the collection, and we are working on that.
