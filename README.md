@@ -4,9 +4,9 @@ By Alpha N. Q.
 Made as a love letter to Massive Monster
 
 Requirements:
-- [Steamodded (>=1.0.0~BETA-1224a)](https://github.com/Steamodded/smods/releases/lastest)
-- [Lovely (>=0.9)](https://github.com/ethangreen-dev/lovely-injector/releases/lastest)
-- [slimeutils (>=1.0)](https://github.com/ellestuff/slimeutils/releases/lastest)
+- [Steamodded (>=1.0.0~BETA-1224a)](https://github.com/Steamodded/smods/releases/latest)
+- [Lovely (>=0.9)](https://github.com/ethangreen-dev/lovely-injector/releases/latest)
+- [slimeutils (>=1.0)](https://github.com/ellestuff/slimeutils/releases/latest)
 
 <p align="center">
   <img src="images\divider.png" />
