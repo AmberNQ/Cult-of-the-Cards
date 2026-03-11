@@ -47,62 +47,38 @@ SMODS.current_mod.custom_ui = function(mod_nodes)
 				} }
 			} }
 		} },
-		{ n = G.UIT.R, config = {
-			align = "cm"
-		}, nodes = {
-			{ n = G.UIT.R, config = {
-				align = "cm"
+		{ n = G.UIT.R, config = { align = "cm", }, nodes = {
+			{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+				{ n = G.UIT.T, config = {
+					text = "Praise the Lamb, conduit to great power, promised",
+					scale = .3,
+					colour = G.C.WHITE
+				} },
+			} },
+			{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+				{ n = G.UIT.T, config = {
+					text = "liberator of the One Who Waits below.",
+					scale = .3,
+					colour = G.C.WHITE
+				} }
+			} },
+		} },
+		{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+			{ n = G.UIT.C, config = {
+				r = 0.1,
+				align = "cm",
+				padding = 0.1,
+				colour = G.C.L_BLACK
 			}, nodes = {
-				{ n = G.UIT.R, config = {
-					emboss = 0.05,
-					r = 0.1,
-					minw = 6,
-					minh = 2.4,
-					align = "cm",
-					padding = 0.1,
-					colour = G.C.L_BLACK
-				}, nodes = {
-					{ n = G.UIT.C, config = {
-						align = "cm",
-						padding = 0.3,
-						minw = 4
-					}, nodes = {
-						{ n = G.UIT.R, config = { align = "cm", }, nodes = {
-							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
-								{ n = G.UIT.T, config = {
-									text = "Praise the Lamb, conduit to great power,",
-									scale = .4,
-									colour = G.C.WHITE
-								} },
-							} },
-							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
-								{ n = G.UIT.T, config = {
-									text = "promised liberator of the One Who Waits below.",
-									scale = .4,
-									colour = G.C.WHITE
-								} }
-							} },
-						} },
-						{ n = G.UIT.R, config = { align = "cm" }, nodes = {
-							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
-								{ n = G.UIT.T, config = {
-									text = "Yet sacrificial beast, take heed; for a Crown",
-									scale = .4,
-									colour = G.C.WHITE
-								} },
-							} },
-							{ n = G.UIT.R, config = { align = "cm" }, nodes = {
-								{ n = G.UIT.T, config = {
-									text = "cannot sit upon two brows.",
-									scale = .4,
-									colour = G.C.WHITE
-								} }
-							} }
-						} }
-					} }
+				{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+					{ n = G.UIT.O, config = { object = slimeutils.create_display_card('j_cotc_amber') } },
+				} },
+				{ n = G.UIT.R, config = { align = "cm" }, nodes = {
+					{ n = G.UIT.T, config = { text = "Mod by ", scale = .4, colour = G.C.WHITE } },
+					{ n = G.UIT.T, config = { text = "Amber N. Q.", scale = .4, colour = G.C.FILTER } }
 				} }
 			} }
-		} }	
+		} }
 	} }
 end
 
@@ -115,6 +91,7 @@ local misc = {
 
 local jokers = {
     --"lamb",
+	"amber"
 }
 
 local tarots = {
@@ -149,12 +126,53 @@ for i, v in ipairs(misc) do
 	assert(SMODS.load_file("lua/misc/"..v..".lua"))()
 end
 
+-- Title Screen Swirl --
+
+local game_main_menu_ref = Game.main_menu
+function Game:main_menu(...)
+    local ret = game_main_menu_ref(self, ...)
+
+    G.SPLASH_BACK:define_draw_steps({
+        {
+            shader = "splash", -- You can replace the shader altogether
+            send = { {
+				name = "time",
+				ref_table = G.TIMERS,
+				ref_value = "REAL_SHADER"
+			}, {
+				name = "vort_speed", val = 0.4
+			}, {
+				name = "colour_1",
+				ref_table = G.ARGS.LOC_COLOURS,
+				ref_value = "crimson"
+			}, {
+				name = "colour_2",
+				ref_table = G.C,
+				ref_value = "L_BLACK"
+			}, {
+				name = "colour_2",
+				ref_table = G.ARGS.LOC_COLOURS,
+				ref_value = "crimson"
+			} }
+        }
+    })
+
+    return ret
+end
+
 -- Text Colours --
 
 loc_colour('red')
 G.ARGS.LOC_COLOURS['crimson'] = HEX('900000')
 
 -- =====================ATLASES=====================
+
+SMODS.Atlas{
+    key = "cotc_splash_screen",
+    path = "cotc_splash_sprite.png",
+    px = 333,
+    py = 216,
+}
 
 SMODS.Atlas {
     key = "modicon",

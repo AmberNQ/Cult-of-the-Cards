@@ -39,6 +39,8 @@ SMODS.Achievement {
 SMODS.Achievement {
 	key = "sins_forgiven",
 	bypass_all_unlocked = true,
+	hidden_name = not SMODS.current_mod.config.dlc_toggle,
+	hidden_text = not SMODS.current_mod.config.dlc_toggle,
 
 	unlock_condition = function (self, args)
         if args then return args.type == "cotc_sins_unlock" end
@@ -48,6 +50,8 @@ SMODS.Achievement {
 SMODS.Achievement {
 	key = "cold_hearted",
 	bypass_all_unlocked = true,
+	hidden_name = not SMODS.current_mod.config.dlc_toggle,
+	hidden_text = not SMODS.current_mod.config.dlc_toggle,
 
 	unlock_condition = function (self, args)
         if args then return args.type == "cotc_cold_unlock" end

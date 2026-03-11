@@ -6,29 +6,38 @@ SMODS.current_mod.config_tab = function()
 
     return {
         n = G.UIT.ROOT, config = {
-            r = 0.1, align = "tm", padding = 0.2, colour = G.C.BLACK 
+            r = 0.1,
+            align = "tm",
+            padding = 0.2,
+            colour = G.C.BLACK 
         }, nodes = {
-	        --[[{ n = G.UIT.C, config = {
-                align = "cm",
-                padding = 0.1
+            { n = G.UIT.R, config = {
+                r = 0.1,
+                align = "tm",
+                padding = 0.2,
+                colour = G.C.L_BLACK 
             }, nodes = {
-		        { n = G.UIT.O, config = {
-                    object = icon
+                --[[{ n = G.UIT.C, config = {
+                    align = "cm",
+                    padding = 0.1
+                }, nodes = {
+		            { n = G.UIT.O, config = { object = icon } }
+                } },]]
+                { n = G.UIT.C, config = {
+                    align = "cm",
+                    padding = 0.1
+                }, nodes = {
+                    create_toggle( {
+                        label = "Woolhaven Content",
+                        ref_table = config,
+                        ref_value = "dlc_toggle",
+                        info = {
+                            "Answer the Cold Mother's call...",
+                            "(requires restart)"
+                        }
+                    } )
                 } }
-            } },]]
-            { n = G.UIT.C, config = {
-                align = "cm",
-                padding = 0.1
-            }, nodes = {
-		        create_toggle( {
-	                label = "Woolhaven Content",
-                    ref_table = config,
-	                ref_value = "dlc_toggle",
-                    info = {
-                        "Answer the Cold Mother's call..."
-                    }
-		        } )
-	        } }
+            } }
         }
     }
 end

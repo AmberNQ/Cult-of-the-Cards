@@ -30,3 +30,11 @@
 - Updated the name and description of a couple Blinds
 
 - Added toggle functionality to DLC blinds. this currently does not stop them from appearing in the collection, and we are working on that.
+
+## V 0.0.6-ALPHA
+
+- Woolhaven toggle in config now removes DLC blinds from the collection, giving a complete spoiler free experience.
+
+- While we sadly cannot outright remove DLC achievements from the list, we have also made the toggle hide the name and description of DLC related achievements.
+
+- Added custom swirl colours to the title screen background along with splash screen image.

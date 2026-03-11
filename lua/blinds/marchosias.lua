@@ -3,6 +3,7 @@ SMODS.Blind{
     key = 'marchosias',
     pos = { y = 6 },
     discovered = false,
+    no_collection = not SMODS.current_mod.config.dlc_toggle,
     boss = { showdown = true },
     boss_colour = HEX('4F636E'),
     mult = 2,

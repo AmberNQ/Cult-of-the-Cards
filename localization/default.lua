@@ -108,10 +108,6 @@ return {
         challenge_names = {},
         collabs = {},
         dictionary={
-            cotc_credits_label = "Credits",
-            cotc_credits_developer = "Developed By: ",
-            cotc_credits_programminghelp = "Assistant Programmer: ",
-            cotc_credits_specialthanks = "Playtesters: ",
             ph_cotc_saved = "What kind of God are you...?",
         },
         high_scores = {},

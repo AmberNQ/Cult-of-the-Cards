@@ -3,6 +3,7 @@ SMODS.Blind{
     key = 'hagar',
     pos = { y = 7 },
     discovered = false,
+    no_collection = not SMODS.current_mod.config.dlc_toggle,
     boss = { min = 1, max = 10 },
     boss_colour = HEX('9F1414'),
     mult = 0.5,

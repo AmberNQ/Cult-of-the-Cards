@@ -1,7 +1,10 @@
-# Cult of the Cards
-By Alpha N. Q.
+<p align="center">
+  <img src="images\logo.png"/>
+</p>
 
-Made as a love letter to Massive Monster
+<h1 align="center"> By Alpha N. Q. </h1>
+
+<h2 align="center"> Made as a love letter to Massive Monster </h2>
 
 Requirements:
 - [Steamodded (>=1.0.0~BETA-1224a)](https://github.com/Steamodded/smods/releases/latest)
@@ -9,7 +12,7 @@ Requirements:
 - [slimeutils (>=1.0)](https://github.com/ellestuff/slimeutils/releases/latest)
 
 <p align="center">
-  <img src="images\divider.png" />
+  <img src="images\divider.png"/>
 </p>
 
 *Praise the Lamb, conduit to great power, promised liberator of the One Who Waits below.*
@@ -31,7 +34,7 @@ Find yourself against the Bishops of the Old Faith once more in this expansion o
     - 1 in 4 held cards are destroyed after each played hand
 
 <p align="center">
-  <img src="images\praisethelamb.png" />
+  <img src="images\praisethelamb.png"/>
 </p>
 
 # CotC: Woolhaven
@@ -57,7 +60,7 @@ The cold mother calls for your aid, but will you answer...?
     - 1 in 2 held cards will Freeze.
 
 <p align="center">
-  <img src="images\wintercomes.png" />
+  <img src="images\wintercomes.png"/>
 </p>
 
 # Where to find me:
@@ -67,7 +70,7 @@ The cold mother calls for your aid, but will you answer...?
 ## [Tumblr](https://www.tumblr.com/alphaanimatez)
 
 # Disclaimer:
-the art used for the dividers in this README file are not mine and belong to Massive Monster and their respective artists. These files can be replaced or even removed at their request. 
+the art used for the dividers in this README file (aside from the logo at the top) is not mine and belongs to Massive Monster and their respective artists. These files can be replaced or even removed at their request. 
 
 All other art used within this mod (Blind chips, Joker cards, etc.) is made and owned by Alpha N. Q. unless stated otherwise. 
 

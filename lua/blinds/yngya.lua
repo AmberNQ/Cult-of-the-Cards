@@ -3,6 +3,7 @@ SMODS.Blind{
     key = 'yngya',
     pos = { y = 5 },
     discovered = false,
+    no_collection = not SMODS.current_mod.config.dlc_toggle,
     boss = { showdown = true },
     boss_colour = HEX('14CFEA'),
     mult = 2,
