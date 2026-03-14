@@ -38,3 +38,26 @@
 - While we sadly cannot outright remove DLC achievements from the list, we have also made the toggle hide the name and description of DLC related achievements.
 
 - Added custom swirl colours to the title screen background along with splash screen image.
+
+## V 0.0.7-ALPHA
+
+- fixed splash screen dimensions, no visible difference.
+
+- Added Relics Consumeable menu.
+
+- Added Laplace's Dice and it's variants
+  - Regular: 1 in 2 chance for +1 hand or +1 discard.
+  - Blessed: 1 in 2 chance for X0.1 blind requirements or +1 discard.
+  - Damned : 1 in 2 chance for +1 hand or X0.9 blind requirements.
+
+- Added skeletons for all other Relics. none of the relics other than Laplace's Dice do anything at the moment.
+
+- Added Blessings and Damnation of the Relics vouchers
+  - both make their respective relics available in the shop.
+
+- Changed the way dlc content is excluded from the game when toggled off, so now dlc exclusive achievements can no longer be seen in the list.
+
+- Added 6 new Editions, half of which work at the moment
+  - Bane: 1 in 3 chance of X0.9 Blind requirements
+  - Vampiric: 1 in 2 chance to gain +1 hand permanently when blind is defeated
+  - Godly: X10 Mult

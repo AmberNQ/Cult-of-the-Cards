@@ -2,12 +2,19 @@
 
 - Add Godhood achievement unlock							[🔃]
 
+- Add Mystic Seller
+	- pay 1 god tear ($100 if we cant add custom currency) for a random spectral card
+
+- Add Relics (custom consumeable)
+
 - Rebalance as necessary
 
 ----   IDEAS   ----
 
 - Add a Knucklebones consumeable card
 	- play a game of knucklebones against the current blind, if you win, adds X5 mult to your next hand.
+
+- Add MultiplayerMod support, allowing for even more relics to be used between players.
 
 ---- BUG FIXES ----
 
@@ -82,49 +89,110 @@ SMODS.current_mod.custom_ui = function(mod_nodes)
 	} }
 end
 
+-- Consumeable Initialization --
+
+SMODS.ConsumableType{
+	key = 'cotc_Relics',
+    default = 'c_fool',
+    primary_colour = HEX('266EB6'),
+    secondary_colour = HEX('266EB6'),
+    collection_rows = { 6, 6 },
+    shop_rate = 1.5,
+
+	inject_card = function(self, center)
+		center.display_size = { w = 71, h = 71 }
+	end
+}
+
+SMODS.UndiscoveredSprite {
+	key = 'cotc_Relics',
+	atlas = 'relic',
+	pos = { x = 0, y = 11 },
+	overlay_pos = { x = 1, y = 11 },	
+
+	inject_card = function(self, center)
+		center.display_size = { w = 71, h = 71 }
+	end
+}
+
 -- File Indexes --
 
-local misc = {
-	"achievements",
-	"config"
+local file_groups = {
+	"misc",
+	"jokers",
+	"tarots",
+	"relics",
+	"blinds"
 }
 
-local jokers = {
-    --"lamb",
-	"amber"
+local files = {
+	misc = {
+		"achievements",
+		"vouchers",
+		"editions",
+		"config"
+	},
+
+	jokers = {
+		--"lamb",
+		"amber"
+	},
+
+	tarots = {
+
+	},
+
+	relics = {
+		"beads",
+		"mirror",
+		"hair",
+		"laplace",
+		"balm",
+	},
+
+	blinds = {
+		"leshy",
+		"heket",
+		"kallamar",
+		"shamura",
+		"narinder"
+	}
 }
 
-local tarots = {
-}
+local files_dlc = {
+	misc = { "ach_dlc" },
 
-local blinds = {
-	"leshy",
-	"heket",
-	"kallamar",
-	"shamura",
-	"narinder",
-	"hagar",
-	"marchosias",
-	"yngya"
-} 
+	jokers = { },
+
+	vouchers = { },
+
+	tarots = { },
+
+	relics = {
+		"idol"
+	},
+
+	blinds = {
+		"hagar",
+		"marchosias",
+		"yngya"
+	}
+}
 
 -- File Loader --
 
-for i, v in ipairs(jokers) do
-	assert(SMODS.load_file("lua/jokers/"..v..".lua"))()
+for _, v in ipairs(file_groups) do
+	for _, v2 in ipairs(files[v]) do
+		assert(SMODS.load_file("lua/"..v.."/"..v2..".lua"))()
+	end
+
+	if SMODS.Mods["cultofcards"].config.dlc_toggle then
+		for _, v2 in ipairs(files_dlc[v]) do
+			assert(SMODS.load_file("lua/"..v.."/"..v2..".lua"))()
+		end
+	end
 end
 
-for i, v in ipairs(tarots) do
-	assert(SMODS.load_file("lua/tarots/"..v..".lua"))()
-end
-
-for i, v in ipairs(blinds) do
-	assert(SMODS.load_file("lua/blinds/"..v..".lua"))()
-end
-
-for i, v in ipairs(misc) do
-	assert(SMODS.load_file("lua/misc/"..v..".lua"))()
-end
 
 -- Title Screen Swirl --
 
@@ -160,18 +228,22 @@ function Game:main_menu(...)
     return ret
 end
 
--- Text Colours --
+-- Custom Colours --
 
 loc_colour('red')
 G.ARGS.LOC_COLOURS['crimson'] = HEX('900000')
 
--- =====================ATLASES=====================
+-- Text Prefix --
+
+quote = '{C:inactive,s:0.7,E:1}'
+
+-- =================ATLASES/SHADERS=================
 
 SMODS.Atlas{
     key = "cotc_splash_screen",
-    path = "cotc_splash_sprite.png",
+    path = "splash_sprite.png",
     px = 333,
-    py = 216,
+    py = 76,
 }
 
 SMODS.Atlas {
@@ -196,6 +268,20 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
+    key = "voucher",
+    path = "placeholder.png",
+    px = 71,
+    py = 95
+}
+
+SMODS.Atlas {
+    key = "relic",
+    path = "relics.png",
+    px = 71,
+    py = 71
+}
+
+SMODS.Atlas {
     key = "blind",
     path = "blinds.png",
     px = 34,
@@ -211,6 +297,10 @@ SMODS.Atlas {
     py = 66
 }
 
+SMODS.Shader {
+	key = "godly",
+	path = "godly.fs"
+}
 -- ======================BADGES======================
 
 cotc_badges = {

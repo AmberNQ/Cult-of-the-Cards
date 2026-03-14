@@ -2,19 +2,10 @@ SMODS.Blind{
     atlas = 'blind',
     key = 'hagar',
     pos = { y = 7 },
-    discovered = false,
-    no_collection = not SMODS.current_mod.config.dlc_toggle,
     boss = { min = 1, max = 10 },
     boss_colour = HEX('9F1414'),
     mult = 0.5,
     dollars = 5,
-
-    in_pool = function(self, args)
-        if not SMODS.Mods["cultofcards"].config.dlc_toggle then
-            return false
-        end
-        return true
-    end,
 
     calculate = function(self, blind, context)
         if context.end_of_round and context.game_over then
@@ -27,7 +18,7 @@ SMODS.Blind{
                 end
             }))
             return {
-                saved = 'ph_cotc_saved',
+                saved = 'ph_cotc_mercy',
             }
         end
     end,
