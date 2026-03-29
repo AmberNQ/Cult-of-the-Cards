@@ -21,7 +21,7 @@
 - Added custom Achievement art. [STILL IN PROGRESS]
 
 - Finished The Executioner
-  - Win by scored *less* than minimum.
+  - Win by scoring *less* than minimum.
 
 ## V 0.0.5-ALPHA
 
@@ -50,7 +50,7 @@
   - Blessed: 1 in 2 chance for X0.1 blind requirements or +1 discard.
   - Damned : 1 in 2 chance for +1 hand or X0.9 blind requirements.
 
-- Added skeletons for all other Relics. none of the relics other than Laplace's Dice do anything at the moment.
+- Added skeletons for a few other Relics. none of the relics other than Laplace's Dice do anything at the moment.
 
 - Added Blessings and Damnation of the Relics vouchers
   - both make their respective relics available in the shop.
@@ -61,3 +61,37 @@
   - Bane: 1 in 3 chance of X0.9 Blind requirements
   - Vampiric: 1 in 2 chance to gain +1 hand permanently when blind is defeated
   - Godly: X10 Mult
+
+## V 0.0.8-ALPHA // Final Stages
+
+- Updated mod menu
+
+- Finished the other three Editions
+  - Necromatic: 1 in 5 chance to add previous blind's requirement to chips.
+  - Zealous: $5 for each used discard.
+  - Merciless: 1 in 3 chance of X5 Mult.
+- NOTE: Shaders for these editions are currently in progress. please be patient.
+
+- Finished all base game Blind functions
+  - Chaos: scored cards turn a random rank.
+  - Famine: Nullifies level of played poker hand (sets level to 1).
+  - Pestilence: Discards use 1 hand.
+  - Conquest: Must play face cards of the same suit.
+  - Death: Destroy 4 random cards per hand played.
+
+- Changed the way Relics are viewed and rendered to make them more like standard cards.
+
+- Updated credits page.
+
+- Finished all other main game Relic Skeletons.
+
+- Changed main menu card to be an Ace of Hearts.
+
+- Added custom deck skins. this will likely be turned into a full texture pack later on, and will be seperated from the rest of the mod if it is.
+
+- added art for Vouchers, will likely be improved later on.
+- Added Golden Deck
+  - Based on the Golden Fleece, +5 Mult for every blind beaten, resets if blind skipped. X2 base Blind size.
+
+- Added Deck of the Berserker
+  - Based on the Fleece of the berseker, X10 Mult, but start with 1 hand and 0 discards.

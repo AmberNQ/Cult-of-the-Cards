@@ -1,8 +1,8 @@
 SMODS.Blind{
     atlas = 'blind',
     key = 'hagar',
-    pos = { y = 7 },
-    boss = { min = 1, max = 10 },
+    pos = { y = 5 },
+    boss = { min = 3 },
     boss_colour = HEX('9F1414'),
     mult = 0.5,
     dollars = 5,

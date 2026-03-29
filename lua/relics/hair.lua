@@ -4,7 +4,7 @@ SMODS.Consumable {
     key = "hair_B",
     set = "cotc_Relics",
     atlas = 'relic', 
-    pos = { x = 0, y = 1 },
+    pos = { x = 0, y = 11 }, soul_pos = { x = 0, y = 1 },
     cost = 10,
     config = {
         extra = {
@@ -21,7 +21,7 @@ SMODS.Consumable {
     key = "hair_D",
     set = "cotc_Relics",
     atlas = 'relic', 
-    pos = { x = 1, y = 1 },
+    pos = { x = 0, y = 11 }, soul_pos = { x = 1, y = 1 },
     cost = 10,
     config = {
         extra = {
@@ -38,7 +38,7 @@ SMODS.Consumable {
     key = "hair",
     set = "cotc_Relics",
     atlas = 'relic', 
-    pos = { x = 2, y = 1 },
+    pos = { x = 0, y = 11 }, soul_pos = { x = 2, y = 1 },
     cost = 10,
     config = {
         extra = {

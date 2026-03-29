@@ -4,7 +4,7 @@ SMODS.Consumable {
     key = "laplace_B",
     set = "cotc_Relics",
     atlas = 'relic', 
-    pos = { x = 3, y = 1 },
+    pos = { x = 0, y = 11 }, soul_pos = { x = 3, y = 1 },
     cost = 10,
     config = {
         extra = {
@@ -72,7 +72,7 @@ SMODS.Consumable {
     key = "laplace_D",
     set = "cotc_Relics",
     atlas = 'relic', 
-    pos = { x = 4, y = 1 },
+    pos = { x = 0, y = 11 }, soul_pos = { x = 4, y = 1 },
     cost = 8,
     config = {
         extra = {
@@ -140,7 +140,7 @@ SMODS.Consumable {
     key = "laplace",
     set = "cotc_Relics",
     atlas = 'relic', 
-    pos = { x = 5, y = 1 },
+    pos = { x = 0, y = 11 }, soul_pos = { x = 5, y = 1 },
     cost = 5,
     config = {
         extra = {

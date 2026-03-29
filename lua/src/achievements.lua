@@ -1,5 +1,3 @@
-local checklist = 0
-
 SMODS.Achievement {
 	key = "order",
 	bypass_all_unlocked = true,
@@ -36,11 +34,21 @@ SMODS.Achievement {
 	end
 }
 
-local godhood = SMODS.Achievement {
+SMODS.Achievement {
+	key = "life",
+	bypass_all_unlocked = true,
+
+	unlock_condition = function (self, args)
+        if args then return args.type == "cotc_life_unlock" end
+	end
+}
+
+SMODS.Achievement {
     atlas = 'achieve',
 	key = "godhood",
 	bypass_all_unlocked = true,
 	reset_on_startup = true,
+	
     hidden_pos = { x = 1, y = 0 }, pos = { x = 1, y = 1 },
 
 	unlock_condition = function (self, args)
