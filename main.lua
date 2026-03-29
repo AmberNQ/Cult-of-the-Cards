@@ -305,7 +305,7 @@ local files = {
 		--"icegore_toe",
 		--"seal",
 		--"slythor_tail",
-		"shoe",
+		--"shoe",
 		--"transmogricon",
 		--"toenail",
 		--"fingernail",
