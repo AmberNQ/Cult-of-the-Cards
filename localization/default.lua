@@ -141,7 +141,7 @@ return {
                 }
             },
             e_cotc_necro = {
-                name = "Necromatic",
+                name = "Necromantic",
                 text = {
                     "{C:green}#1# in #2#{} chance to",
                     "add previous {C:attention}blind's",
@@ -1139,7 +1139,7 @@ return {
             cotc_bane = "Bane",
             cotc_godly = "Godly",
             cotc_merciless = "Merciless",
-            cotc_necro = "Necromatic",
+            cotc_necro = "Necromantic",
             cotc_vampiric = "Vampiric",
             cotc_zealous = "Zealous"
         },
