@@ -1,6 +1,6 @@
 SMODS.Edition {
     key = "bane",
-    shader = false,
+    shader = "bane",
     weight = 20,
     extra_cost = 2,
     config = {
@@ -40,7 +40,7 @@ SMODS.Edition {
 
 SMODS.Edition {
     key = "vampiric",
-    shader = false,
+    shader = "vampiric",
     weight = 18,
     extra_cost = 3,
     config = {
@@ -74,13 +74,14 @@ SMODS.Edition {
 
 SMODS.Edition {
     key = "necro",
-    shader = false,
+    shader = "necro",
     weight = 14,
     extra_cost = 5,
     config = {
         odds = 5,
         chips = 0
     },
+    disable_base_shader = true,
 
     loc_vars = function(self, info_queue, card)
         local numerator, denominator = SMODS.get_probability_vars(card, 1, card.edition.odds, 'cotc_necro')
@@ -116,7 +117,7 @@ SMODS.Edition {
 
 SMODS.Edition {
     key = "zealous",
-    shader = false,
+    shader = "zealous",
     weight = 10,
     extra_cost = 5,
     config = {
@@ -146,7 +147,7 @@ SMODS.Edition {
 
 SMODS.Edition {
     key = "merciless",
-    shader = false,
+    shader = "merciless",
     weight = 5,
     extra_cost = 7,
     config = {
@@ -175,7 +176,7 @@ SMODS.Edition {
 
 SMODS.Edition {
     key = "godly",
-    shader = false,
+    shader = "godly",
     weight = 3,
     extra_cost = 10,
     config = {
