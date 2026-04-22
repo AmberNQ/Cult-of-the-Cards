@@ -1,3 +1,8 @@
+SMODS.Shader {
+    key = "bane",
+    path = "bane.fs"
+}
+
 SMODS.Edition {
     key = "bane",
     shader = "bane",
@@ -7,6 +12,7 @@ SMODS.Edition {
         odds = 3,
         xblind = 0.9
     },
+    disable_base_shader = true,
 
     loc_vars = function(self, info_queue, card)
         local numerator, denominator = SMODS.get_probability_vars(card, 1, card.edition.odds, 'cotc_bane')
