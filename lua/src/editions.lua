@@ -44,6 +44,11 @@ SMODS.Edition {
     }
 }
 
+SMODS.Shader {
+    key = "vampiric",
+    path = "vampiric.fs"
+}
+
 SMODS.Edition {
     key = "vampiric",
     shader = "vampiric",
