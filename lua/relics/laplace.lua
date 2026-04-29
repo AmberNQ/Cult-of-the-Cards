@@ -2,10 +2,10 @@
 
 SMODS.Consumable {
     key = "laplace_B",
-    set = "cotc_Relics",
-    atlas = 'relic', 
+    set = "cotc_Relic",
+    atlas = 'relic',
     pos = { x = 0, y = 11 }, soul_pos = { x = 3, y = 1 },
-    cost = 10,
+    cost = 6,
     config = {
         extra = {
             odds = 2,
@@ -63,17 +63,22 @@ SMODS.Consumable {
 		end
     end,
 
-    can_use = function(self, card) return G.STATE == G.STATES.SELECTING_HAND and G.GAME.chips < G.GAME.blind.chips end
+    can_use = function(self, card) return G.STATE == G.STATES.SELECTING_HAND and G.GAME.chips < G.GAME.blind.chips end,
+    
+    cotc_credits = {
+        art = "Amber N. Q.",
+        code = "Amber N. Q."
+    }
 }
 
 -- Damned Dice --
 
 SMODS.Consumable {
     key = "laplace_D",
-    set = "cotc_Relics",
-    atlas = 'relic', 
+    set = "cotc_Relic",
+    atlas = 'relic',
     pos = { x = 0, y = 11 }, soul_pos = { x = 4, y = 1 },
-    cost = 8,
+    cost = 5,
     config = {
         extra = {
             odds = 2,
@@ -132,16 +137,21 @@ SMODS.Consumable {
 	end,
 	
 	can_use = function(self, card) return G.STATE == G.STATES.SELECTING_HAND and G.GAME.chips < G.GAME.blind.chips end,
+
+    cotc_credits = {
+        art = "Amber N. Q.",
+        code = "Amber N. Q."
+    }
 }
 
 -- Default Dice --
 
 SMODS.Consumable {
     key = "laplace",
-    set = "cotc_Relics",
-    atlas = 'relic', 
+    set = "cotc_Relic",
+    atlas = 'relic',
     pos = { x = 0, y = 11 }, soul_pos = { x = 5, y = 1 },
-    cost = 5,
+    cost = 4,
     config = {
         extra = {
             odds = 2,
@@ -189,5 +199,10 @@ SMODS.Consumable {
         delay(0.8)
     end,
 
-    can_use = function(self, card) return G.STATE == G.STATES.SELECTING_HAND end
+    can_use = function(self, card) return G.STATE == G.STATES.SELECTING_HAND end,
+
+    cotc_credits = {
+        art = "Amber N. Q.",
+        code = "Amber N. Q."
+    }
 }

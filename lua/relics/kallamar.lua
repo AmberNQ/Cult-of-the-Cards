@@ -2,8 +2,8 @@
 
 SMODS.Consumable {
     key = "ear",
-    set = "cotc_Relics",
-    atlas = 'relic', 
+    set = "cotc_Relic",
+    atlas = 'relic',
     pos = { x = 0, y = 11 }, soul_pos = { x = 2, y = 9 },
     cost = 10,
     config = {
@@ -19,8 +19,8 @@ SMODS.Consumable {
 
 SMODS.Consumable {
     key = "ear_cleansed",
-    set = "cotc_Relics",
-    atlas = 'relic', 
+    set = "cotc_Relic",
+    atlas = 'relic',
     pos = { x = 0, y = 11 }, soul_pos = { x = 3, y = 9 },
     unlocked = false,
     cost = 10,

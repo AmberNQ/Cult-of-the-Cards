@@ -74,10 +74,10 @@ SMODS.Back{
 end]]
 
 SMODS.Back{
-    key = "berserk2",
+    key = "berserk",
     atlas = "deck",
     pos = { x = 1, y = 1 },
-    unlocked = true,
+    unlocked = false,
     config = { xmult = 10, hands = 0.5, discards = 0 },
 
     apply = function(self, back)
@@ -95,6 +95,14 @@ SMODS.Back{
                 xmult = G.GAME.selected_back.effect.config.xmult
             }
         end
+    end,
+
+    locked_loc_vars = function(self, info_queue, card)
+        return { vars = { 20 } }
+    end,
+
+    check_for_unlock = function(self, args)
+        return args.type == 'ante_up' and args.ante == 20
     end
 }
 

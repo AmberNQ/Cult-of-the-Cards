@@ -27,8 +27,17 @@ SMODS.Joker {
 
 SMODS.Joker {
     atlas = 'credits',
-    key = 'massive',
+    key = 'meta',
 	pos = { x = 3, y = 0 }, soul_pos = { x = 3, y = 1 },
+    no_collection = true,
+
+    in_pool = function(self, args) return false end
+}
+
+SMODS.Joker {
+    atlas = 'credits',
+    key = 'massive',
+	pos = { x = 5, y = 0 }, soul_pos = { x = 5, y = 1 },
     no_collection = true,
 
     in_pool = function(self, args) return false end

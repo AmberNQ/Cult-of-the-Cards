@@ -21,7 +21,7 @@ Requirements:
 
 Find yourself against the Bishops of the Old Faith once more in this expansion of the original Balatro. Cleave your way through each blind, rip the souls from their very hearts, and cement yourself as the God of the Cards.
 
-**New Consumeables:** A proper deity is nothing without their tools, and your runs will have no short supply of them at all. From new Tarot cards to Relics, your power with be unquestionable and your wins will be near guaranteed.
+**New Consumeables:** A proper deity is nothing without their tools, and your runs will have no short supply of them at all. From new Tarot cards to Relics, your power will be unquestionable and your wins will be near guaranteed.
 
 **New Editions:** Your Deck remains weaker still, but the power you seek lies not in the card itself, but in its potential.
 
@@ -50,8 +50,6 @@ Find yourself against the Bishops of the Old Faith once more in this expansion o
 *Come home, lost Lamb.*
 
 ***Come home.***
-
-The cold mother calls for your aid, but will you answer...?
 
 **New Relics:** The God of Winter gives you numerous gifts to help you in your mission.
 
@@ -82,8 +80,9 @@ The cold mother calls for your aid, but will you answer...?
 
 # Credits and Contributions:
 
-### Lead Developper and Artist: Amber NQ
-### Assistant Artist: Sargeant Death
+### Lead Developper: Amber NQ
+### Artists: Amber NQ, Sargeant Death
+### Shader Design: Metanite64
 
 # Where to find me:
 
@@ -93,8 +92,6 @@ The cold mother calls for your aid, but will you answer...?
 
 # Disclaimer:
 the art used for the dividers in this README file (aside from the logos with the mod' s name) is not mine and belongs to Massive Monster and their respective artists. These files can be replaced or even removed at their request. 
-
-All art used within this mod (Blind chips, Joker cards, etc.) is made and owned by Amber N. Q. unless stated otherwise. 
 
 All characters and objects referenced in this mod belong to Massive Monster.
 

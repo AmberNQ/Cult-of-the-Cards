@@ -1,6 +1,6 @@
 SMODS.Consumable {
     key = "ashes",
-    set = "cotc_Relics",
+    set = "cotc_Relic",
     atlas = 'relic', 
     pos = { x = 0, y = 11 }, soul_pos = { x = 2, y = 10 },
     cost = 10,

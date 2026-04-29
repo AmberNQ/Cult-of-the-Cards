@@ -2,8 +2,8 @@
 
 SMODS.Consumable {
     key = "tears_B",
-    set = "cotc_Relics",
-    atlas = 'relic', 
+    set = "cotc_Relic",
+    atlas = 'relic',
     pos = { x = 0, y = 11 }, soul_pos = { x = 0, y = 4 },
     cost = 10,
     config = {
@@ -19,8 +19,8 @@ SMODS.Consumable {
 
 SMODS.Consumable {
     key = "tears_D",
-    set = "cotc_Relics",
-    atlas = 'relic', 
+    set = "cotc_Relic",
+    atlas = 'relic',
     pos = { x = 0, y = 11 }, soul_pos = { x = 1, y = 4 },
     cost = 10,
     config = {

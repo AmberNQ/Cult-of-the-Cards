@@ -1,18 +1,22 @@
 {
-	"id": "cultofcards",
+	"id": "CultCards",
 	"name": "Cult Of The Cards",
-	"author": ["Amber N. Q."], 
-	"description": "N/A",
-	"prefix": "cotc", 
+	"author": ["Amber N. Q."],
+	"description": "If you're reading this, you screwed something up. You should be ashamed of yourself.",
+	"prefix": "cotc",
 	"main_file": "main.lua",
 	"priority" : 0,
 	"badge_colour": "333333",
 	"badge_text_colour": "FF0000",
-	"display_name": "Cult Cards", 
-	"version": "0.0.8-ALPHA", 
+	"display_name": "Cult Cards",
+	"version": "0.0.9-ALPHA",
 	"dependencies": [
 		"Steamodded (>=1.0.0~BETA-1224a)",
 		"Lovely (>=0.9)",
 		"slime_utils (>=1.0)"
+	],
+	"conflicts": [
+		"ColdBeans (>=0.0.1)",
+		"Blindside (>=0.0.1)"
 	]
 }

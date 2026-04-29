@@ -1,7 +1,7 @@
 SMODS.Consumable {
     key = "claw",
-    set = "cotc_Relics",
-    atlas = 'relic', 
+    set = "cotc_Relic",
+    atlas = 'relic',
     pos = { x = 0, y = 11 }, soul_pos = { x = 0, y = 10 },
     unlocked = false,
     cost = 10,

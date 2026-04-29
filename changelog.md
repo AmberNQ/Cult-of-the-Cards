@@ -90,8 +90,55 @@
 - Added custom deck skins. this will likely be turned into a full texture pack later on, and will be seperated from the rest of the mod if it is.
 
 - added art for Vouchers, will likely be improved later on.
+
 - Added Golden Deck
   - Based on the Golden Fleece, +5 Mult for every blind beaten, resets if blind skipped. X2 base Blind size.
 
 - Added Deck of the Berserker
   - Based on the Fleece of the berseker, X10 Mult, but start with 1 hand and 0 discards.
+
+## V 0.0.9 // FINAL Final Stages, for real this time
+
+- Updated Mod Credits
+
+- Added Tags for each new Edition
+
+- Finished Claunecks's Shoe Relic
+  - +100 chips per Tarot card used this run if none used, +50 chips.
+
+- Added Exorcist's Finger
+  - Regular: Create a random Tarot card
+  - Blessed: Create a random Spectral card
+  - Damned : Create a random Pelt Tarot card
+
+- Added Seal of the Bishops
+  - X0.25 Mult for each remaining King in your deck
+
+- Added Clauneck's Mirror
+  - Destroy all Jokers and...
+  - Regular: Increase level of random hand per Joker
+  - Blessed: Increase level of every hand per Joker
+  - Damned : Increase level of most played hand per Joker
+
+- Added Kudaai's Toenail
+  - Upgrade most played poker hand by 1 level
+
+- Added Pelt Tarot Cards (new consumeable type)
+
+- Added Hearts I, II, and III
+  - Permanently gain +1, +2, and +3 hands per round respectively
+
+- Added Nature's Boon
+  - Gain X0.1 Mult for every $1 you have
+
+- Added Hands of Rage
+  - +1 hand size
+
+- Added Death's Door
+  - X5 Mult on Final Hand of round
+
+- Changed credits descriptions on cards to now show in the mod badge, to help make things cleaner
+
+- Added Temple and Premonition Booster packs
+
+- Added Unlock condition to the Deck of the Berserker (reach Ante 20)

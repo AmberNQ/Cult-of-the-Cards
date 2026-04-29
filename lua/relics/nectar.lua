@@ -1,7 +1,7 @@
 SMODS.Consumable {
     key = "nectar",
-    set = "cotc_Relics",
-    atlas = 'relic', 
+    set = "cotc_Relic",
+    atlas = 'relic',
     pos = { x = 0, y = 11 }, soul_pos = { x = 1, y = 7 },
     cost = 10,
     config = {

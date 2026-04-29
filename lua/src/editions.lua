@@ -1,7 +1,7 @@
 SMODS.Edition {
     key = "bane",
     shader = false,
-    weight = 18,
+    weight = 20,
     extra_cost = 2,
     config = {
         odds = 3,
@@ -11,10 +11,6 @@ SMODS.Edition {
     loc_vars = function(self, info_queue, card)
         local numerator, denominator = SMODS.get_probability_vars(card, 1, card.edition.odds, 'cotc_bane')
         return { vars = { numerator, denominator, card.edition.xblind } }
-    end,
-
-    get_weight = function(self)
-        return G.GAME.edition_rate * self.weight
     end,
 
     calculate = function(self, card, context)
@@ -34,13 +30,18 @@ SMODS.Edition {
                 }))
             end
         end
-    end
+    end,
+
+    cotc_credits = {
+        shader = "Metanite64",
+        code = "Amber N. Q."
+    }
 }
 
 SMODS.Edition {
     key = "vampiric",
     shader = false,
-    weight = 16,
+    weight = 18,
     extra_cost = 3,
     config = {
         odds = 2,
@@ -50,10 +51,6 @@ SMODS.Edition {
     loc_vars = function(self, info_queue, card)
         local numerator, denominator = SMODS.get_probability_vars(card, 1, card.edition.odds, 'cotc_vampiric')
         return { vars = { numerator, denominator, card.edition.hands } }
-    end,
-
-    get_weight = function(self)
-        return G.GAME.edition_rate * self.weight
     end,
 
     calculate = function(self, card, context)
@@ -67,13 +64,18 @@ SMODS.Edition {
                 }
             end
         end
-    end
+    end,
+
+    cotc_credits = {
+        shader = "Metanite64",
+        code = "Amber N. Q."
+    }
 }
 
 SMODS.Edition {
     key = "necro",
     shader = false,
-    weight = 12,
+    weight = 14,
     extra_cost = 5,
     config = {
         odds = 5,
@@ -85,10 +87,6 @@ SMODS.Edition {
         return { vars = { numerator, denominator } }
     end,
 
-    get_weight = function(self)
-        return G.GAME.edition_rate * self.weight
-    end,
-
     calculate = function(self, card, context)
         if (context.playing_card_end_of_round and context.other_card == card and context.cardarea == G.hand) or (context.end_of_round and context.main_eval) then
             card.edition.chips = G.GAME.blind.chips
@@ -96,7 +94,7 @@ SMODS.Edition {
         end
 
         if context.setting_blind and SMODS.pseudorandom_probability(card, 'cotc_necro', 1, card.edition.odds) then
-            G.GAME.chips = card.edition.chips
+            G.GAME.chips = G.GAME.chips + card.edition.chips
             card:juice_up(.4,.4)
             if G.GAME.chips >= G.GAME.blind.chips then
                 G.STATE = G.STATES.HAND_PLAYED
@@ -104,11 +102,16 @@ SMODS.Edition {
                 end_round()
             end
             return {
-                message = "Hit!",
+                message = localize("k_cotc_hit"),
                 colour = G.C.EDITION
             }
         end
-    end
+    end,
+
+    cotc_credits = {
+        shader = "Metanite64",
+        code = "Amber N. Q."
+    }
 }
 
 SMODS.Edition {
@@ -124,10 +127,6 @@ SMODS.Edition {
         return { vars = { card.edition.dollars } }
     end,
 
-    get_weight = function(self)
-        return G.GAME.edition_rate * self.weight
-    end,
-
     calculate = function(self, card, context)
         if context.pre_discard then
             ease_dollars(card.edition.dollars)
@@ -137,60 +136,66 @@ SMODS.Edition {
                 colour = G.C.GOLD
             }
         end
-    end
+    end,
+
+    cotc_credits = {
+        shader = "Metanite64",
+        code = "Amber N. Q.",
+    }
 }
 
 SMODS.Edition {
     key = "merciless",
     shader = false,
-    weight = 9,
+    weight = 5,
     extra_cost = 7,
     config = {
         odds = 3,
-        xmult = 5
+        x_mult = 5
     },
 
     loc_vars = function(self, info_queue, card)
         local numerator, denominator = SMODS.get_probability_vars(card, 1, card.edition.odds, 'cotc_merciless')
-        return { vars = { numerator, denominator, card.edition.xmult } }
-    end,
-
-    get_weight = function(self)
-        return G.GAME.edition_rate * self.weight
+        return { vars = { numerator, denominator, card.edition.x_mult } }
     end,
 
     calculate = function(self, card, context)
         if context.pre_joker or (context.main_scoring and context.cardarea == G.play) and SMODS.pseudorandom_probability(card, 'cotc_merciless', 1, card.edition.odds) then
             return {
-                x_mult = card.edition.xmult
+                x_mult = card.edition.x_mult
             }
         end
-    end
+    end,
+
+    cotc_credits = {
+        shader = "Metanite64",
+        code = "Amber N. Q."
+    }
 }
 
 SMODS.Edition {
     key = "godly",
     shader = false,
-    --shader = "godly",
-    weight = 7,
+    weight = 3,
     extra_cost = 10,
     config = {
-        xmult = 10 
+        x_mult = 10
     },
 
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.edition.xmult } }
-    end,
-
-    get_weight = function(self)
-        return G.GAME.edition_rate * self.weight
+        return { vars = { card.edition.x_mult } }
     end,
 
     calculate = function(self, card, context)
         if context.pre_joker or (context.main_scoring and context.cardarea == G.play) then
             return {
-                x_mult = card.edition.xmult
+                x_mult = card.edition.x_mult
             }
         end
-    end
+    end,
+
+    cotc_credits = {
+        shader = "Metanite64",
+        code = "Amber N. Q."
+    }
 }

@@ -1,3 +1,11 @@
+--[[
+IMPORTANT MESSAGE TO TRANLATORS:
+remember to add your name in the mod credits when you are done. you can find it in the main.lua file,
+right under the "main mod tab" comment. from there, find "Main Credits", "Middle Collumn", and the line with your language.
+
+thanks a million for your help :3
+]]
+
 return {
     descriptions = {
         Back = {
@@ -7,17 +15,21 @@ return {
                     "{C:mult}+#1#{} Mult for each",
                     "consecutive {C:attention}Blind{},",
                     "resets if Blind is {C:attention}skipped",
-                    "{C:red}X#3#{} base Blind size",
+                    "{X:mult,C:white}X#3#{} base Blind size",
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
-            b_cotc_berserk2 = {
+            b_cotc_berserk = {
                 name = "Deck of the Berserker",
                 text = {
                     "{X:mult,C:white}X#1#{} Mult",
                     "start with {C:blue}#2#{} hand",
                     "and {C:red}#3#{} discards"
-                }
+                },
+                unlock = {
+                    "Reach Ante",
+                    "level {E:1,C:attention}#1#",
+                },
             }
         },
         Sleeve = {
@@ -27,7 +39,7 @@ return {
                     "{C:mult}+#1#{} Mult for each",
                     "consecutive {C:attention}Blind{},",
                     "resets if Blind is {C:attention}skipped",
-                    "{C:red}X#3#{} base Blind size",
+                    "{X:mult,C:white}X#3#{} base Blind size",
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
@@ -133,7 +145,8 @@ return {
                 text = {
                     "{C:green}#1# in #2#{} chance to",
                     "add previous {C:attention}blind's",
-                    "requirement to {C:chips}chips"
+                    "requirement to {C:chips}chips",
+                    "at start of round"
                 }
             },
             e_cotc_vampiric = {
@@ -148,7 +161,7 @@ return {
                 name = "Zealous",
                 text = {
                     "{C:gold}$#1#{} for each",
-                    "discard used",
+                    "{C:red}discard{} used",
                 }
             },
         },
@@ -167,10 +180,18 @@ return {
                 text = {
                     "idk yet"
                 }
+            },
+            j_cotc_resurrection = {
+                name = { "Ritual of", "Resurrection" },
+                text = {
+                    "{C:attention}Once per Ante{}, bring",
+                    "a sold or destroyed Joker",
+                    "back to your {C:attention}hand"
+                }
             }
         },
         Other = {
-            p_cotc_temple_normal = {
+            p_cotc_temple = {
                 name = "Temple Pack",
                 text = {
                     "Choose {C:attention}#1#{} of up to",
@@ -179,8 +200,7 @@ return {
             },
             p_cotc_temple_jumbo = {
                 name = {
-                    "Jumbo",
-                    "Temple Pack"
+                    "Jumbo Temple Pack"
                 },
                 text = {
                     "Choose {C:attention}#1#{} of up to",
@@ -189,48 +209,41 @@ return {
             },
             p_cotc_temple_mega = {
                 name = {
-                    "Mega",
-                    "Temple Pack"
+                    "Mega Temple Pack"
                 },
                 text = {
                     "Choose {C:attention}#1#{} of up to",
                     "{C:attention}#2# {C:chemach}Relics{}"
                 },
             },
-            p_cotc_temple_holy = {
+            p_cotc_pelt = {
                 name = {
-                    "{C:edition}Holy",
-                    "Temple Pack"
+                    "Premonition Pack"
                 },
                 text = {
                     "Choose {C:attention}#1#{} of up to",
-                    "{C:attention}#2# {C:blue}Blessed{} or {C:red}Damned",
-                    "{C:chemach}Relics{}"
+                    "{C:attention}#2# {C:clauneck}Pelt Tarot{} cards"
                 },
             },
-            p_cotc_temple_holy_jumbo = {
+            p_cotc_pelt_jumbo = {
                 name = {
-                    "Jumbo {C:edition}Holy",
-                    "Temple Pack"
+                    "Jumbo Premonition Pack"
                 },
                 text = {
                     "Choose {C:attention}#1#{} of up to",
-                    "{C:attention}#2# {C:blue}Blessed{} or {C:red}Damned",
-                    "{C:chemach}Relics{}"
+                    "{C:attention}#2# {C:clauneck}Pelt Tarot{} cards"
                 },
             },
-            p_cotc_temple_holy_mega = {
+            p_cotc_pelt_mega = {
                 name = {
-                    "Mega {C:edition}Holy",
-                    "Temple Pack"
+                    "Mega Premonition Pack"
                 },
                 text = {
                     "Choose {C:attention}#1#{} of up to",
-                    "{C:attention}#2# {C:blue}Blessed{} or {C:red}Damned",
-                    "{C:chemach}Relics{}"
+                    "{C:attention}#2# {C:clauneck}Pelt Tarot{} cards"
                 },
             },
-            undiscovered_cotc_tarots = {
+            undiscovered_cotc_tarot = {
                 name = "Not Discovered",
                 text = {
                     "Purchase or use",
@@ -239,35 +252,69 @@ return {
                     "learn what it does"
                 }
             },
-            undiscovered_cotc_relics = {
+            undiscovered_cotc_relic = {
                 name = "Not Discovered",
                 text = {
                     "Purchase or use",
-                    "this card in an",
+                    "this Relic in an",
                     "unseeded run to",
                     "learn what it does"
                 }
             },
-            cotc_credit = {
-				name = 'Artist:',
-				text = {
-					"{C:attention}#1#",
-					"{C:inactive,s:0.7}#2#"
-				}
-			},
         },
         Planet = {},
         Spectral = {},
-        cotc_Tarots = {
+        cotc_Tarot = {
+            c_cotc_boon = {
+                name = "Nature's Boon",
+                text = {
+                    "Gain {X:mult,C:white}X#1#{} Mult for",
+                    "each {C:gold}$1{} you have.",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+                    quote.."Your cornucopia runneth over."
+                }
+            },
+            c_cotc_death = {
+                name = "Death's Door",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult on {C:attention}final",
+                    "{C:attention}hand{} of round",
+                    quote.."Hope to be turned away."
+                }
+            },
+            c_cotc_hand = {
+                name = "Hands of Rage",
+                text = {
+                    "{C:attention}+#1#{} hand size",
+                    quote.."Such violent wrath cannot be contained."
+                }
+            },
             c_cotc_hearts = {
                 name = "The Hearts I",
                 text = {
-                    "permanent {C:blue}+1 {}hand",
+                    "Permanently gain",
+                    "{C:blue}+#1#{} hand per round",
                     quote.."A minor remedy."
                 }
             },
+            c_cotc_hearts2 = {
+                name = "The Hearts II",
+                text = {
+                    "Permanently gain",
+                    "{C:blue}+#1#{} hands per round",
+                    quote.."A remedy."
+                }
+            },
+            c_cotc_hearts3 = {
+                name = "The Hearts III",
+                text = {
+                    "Permanently gain",
+                    "{C:blue}+#1#{} hands per round",
+                    quote.."A major remedy."
+                }
+            },
         },
-        cotc_Relics = {
+        cotc_Relic = {
             c_cotc_aethrile = {
                 name = "Aethrile's Powder Box",
                 text = {
@@ -480,7 +527,7 @@ return {
                 name = "Exorcist's Finger",
                 text = {
                     "Creates a random",
-                    "Spectral card",
+                    "{C:tarot}Tarot{} card",
                     quote.."Appendage of the incompetent exorcist."
                 }
             },
@@ -490,8 +537,8 @@ return {
                     "Exorcist's Finger"
                 },
                 text = {
-                    "Creates 2 random",
-                    "Spectral cards",
+                    "Creates a random",
+                    "{C:spectral}Spectral{} card",
                     quote.."Haunted bone, brittle sinew."
                 }
             },
@@ -502,7 +549,7 @@ return {
                 },
                 text = {
                     "Creates a random",
-                    "Eternal Spectral card",
+                    "{C:clauneck}Pelt Tarot{} card",
                     quote.."Magnet to the damned."
                 }
             },
@@ -546,8 +593,8 @@ return {
                     "Kudaai's Fingernail"
                 },
                 text = {
-                    "Reroll Shop Jokers",
-                    "with random Editions",
+                    "Upgrade {C:attention}3{} selected",
+                    "cards by {C:attention}1{} level",
                     quote.."Vicious claw, wickedly sharp."
                 }
             },
@@ -697,9 +744,9 @@ return {
             c_cotc_mirror = {
                 name = "Clauneck's Mirror",
                 text = {
-                    "Destroy all Jokers.",
-                    "increases level of random hand",
-                    "per destroyed Joker.",
+                    "{C:attention}Destroy{} all Jokers,",
+                    "increase level of {C:attention}random hand",
+                    "per destroyed Joker",
                     quote.."The face that stares back; yours, and yet not."
                 }
             },
@@ -709,9 +756,9 @@ return {
                     "Clauneck's Mirror"
                 },
                 text = {
-                    "Destroy all Jokers.",
-                    "increases level of random hand",
-                    "per destroyed Joker.",
+                    "{C:attention}Destroy{} all Jokers,",
+                    "increase level of {C:attention}every hand",
+                    "per destroyed Joker",
                     quote.."Borrow from tomorrow's fortune."
                 }
             },
@@ -721,9 +768,9 @@ return {
                     "Clauneck's Mirror"
                 },
                 text = {
-                    "Destroy all Jokers.",
-                    "increases level of random hand",
-                    "per destroyed Joker.",
+                    "{C:attention}Destroy{} all Jokers,",
+                    "increase level of {C:attention}most played hand",
+                    "per destroyed Joker",
                     quote.."Agony of the past, serve me in the present."
                 }
             },
@@ -752,9 +799,10 @@ return {
                     "the Bishops"
                 },
                 text = {
-                    "Not Sure Yet",
-                    quote.."Used once to seal the",
-                    quote.."dogma of the Bishops."
+                    "{X:chips,C:white}X#1#{} Chips for each",
+                    "remaining {C:attention}King{} in deck",
+                    "{C:inactive}(Currently {X:chips,C:white}X#2#{C:inactive} Chips)",
+                    quote.."Used once to seal the dogma of the Bishops."
                 }
             },
             c_cotc_shoe = {
@@ -762,14 +810,11 @@ return {
                     "Clauneck's Shoe"
                 },
                 text = {
-                    {
-                        "+100 chips for every",
-                        "Tarot card you've used",
-                        "this run",
-                        quote.."Does he even know that it's missing?"
-                    }, {
-                        "if none used, +50 chips"
-                    }
+                    "{C:chips}+#1#{} chips per {C:tarot}Tarot",
+                    "card used this run",
+                    "if none used, {C:chips}+#2#{} chips",
+                    "{C:inactive}(Currently {C:chips}+#3#{C:inactive} chips)",
+                    quote.."Does he even know that it's missing?"
                 }
             },
             c_cotc_shunrue = {
@@ -904,7 +949,8 @@ return {
                     "Kudaai's Toenail"
                 },
                 text = {
-                    "Not Sure Yet",
+                    "Upgrade {C:attention}most played{}",
+                    "poker hand by {C:attention}#1#{} level",
                     quote.."The most ancient toenail around."
                 }
             },
@@ -968,7 +1014,56 @@ return {
             },
         },
         Stake = {},
-        Tag = {},
+        Tag = {
+            tag_cotc_bane = {
+                name = "Bane Tag",
+                text = {
+                    "Next base edition shop",
+                    "Joker is free and",
+                    "becomes {C:dark_edition}Bane",
+                }
+            },
+            tag_cotc_godly = {
+                name = "Godly Tag",
+                text = {
+                    "Next base edition shop",
+                    "Joker is free and",
+                    "becomes {C:dark_edition}Godly",
+                }
+            },
+            tag_cotc_merciless = {
+                name = "Merciless Tag",
+                text = {
+                    "Next base edition shop",
+                    "Joker is free and",
+                    "becomes {C:dark_edition}Merciless",
+                }
+            },
+            tag_cotc_necro = {
+                name = "Necromatic Tag",
+                text = {
+                    "Next base edition shop",
+                    "Joker is free and",
+                    "becomes {C:dark_edition}Necromatic",
+                }
+            },
+            tag_cotc_vampiric = {
+                name = "Vampiric Tag",
+                text = {
+                    "Next base edition shop",
+                    "Joker is free and",
+                    "becomes {C:dark_edition}Vampiric",
+                }
+            },
+            tag_cotc_zealous = {
+                name = "Zealous Tag",
+                text = {
+                    "Next base edition shop",
+                    "Joker is free and",
+                    "becomes {C:dark_edition}Zealous",
+                }
+            },
+        },
         Tarot = {},
         Voucher = {
             v_cotc_blessing = {
@@ -1020,11 +1115,24 @@ return {
         challenge_names = {},
         collabs = {},
         dictionary = {
-            b_cotc_tarots_cards = "Pelt Tarots",
-            k_cotc_tarots = "Tarot",
-            b_cotc_relics_cards = "Relic Cards",
-            k_cotc_relics = "Relic",
+            b_cotc_tarot_cards = "Pelt Tarot Cards",
+            b_cotc_relic_cards = "Relics",
+            k_cotc_tarot = "Pelt Tarot",
+            k_cotc_relic = "Relic",
+            k_temple_pack = "Temple Pack",
+            k_pelt_pack = "Premonition Pack",
+            k_cotc_hit = "Hit!",
             ph_cotc_mercy = "What kind of God are you...?",
+            cotc_title = "Cult of the Cards",
+            cotc_credits_lead = "Mod by ",
+            cotc_credits_shaders = "Shaders by ",
+            cotc_credits_art = "Art by ",
+            cotc_credits_thanks = "Special Thanks to ",
+            cotc_credits_local = "Localizations:",
+            cotc_credits_join = "Join the Cult",
+            cotc_dlc_toggle = "Woolhaven Content",
+            cotc_dlc_toggle_desc = { "Answer the Cold Mother's call...", "(requires restart)" },
+            cotc_ritual_title = "-- Select Joker --"
         },
         high_scores = {},
         labels = {
@@ -1042,7 +1150,10 @@ return {
         suits_plural = {},
         suits_singular = {},
         tutorial = {},
-        v_dictionary = {},
+        v_dictionary = {
+			cotc_art = { "Art: #1#" },
+			cotc_code = { "Code: #1#" },
+        },
         v_text = {},
     }
 }
