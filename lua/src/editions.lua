@@ -126,6 +126,11 @@ SMODS.Edition {
     }
 }
 
+SMODS.Shader {
+    key = "zealous",
+    path = "zealous.fs"
+}
+
 SMODS.Edition {
     key = "zealous",
     shader = "zealous",
@@ -134,6 +139,7 @@ SMODS.Edition {
     config = {
         dollars = 5
     },
+    disable_base_shader = true,
 
     loc_vars = function(self, info_queue, card)
         return { vars = { card.edition.dollars } }
