@@ -161,7 +161,10 @@ SMODS.Edition {
         code = "Amber N. Q.",
     }
 }
-
+SMODS.Shader {
+    key = "merciless",
+    path = "merciless.fs"
+}
 SMODS.Edition {
     key = "merciless",
     shader = "merciless",
