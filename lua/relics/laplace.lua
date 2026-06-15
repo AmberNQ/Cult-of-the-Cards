@@ -64,11 +64,6 @@ SMODS.Consumable {
     end,
 
     can_use = function(self, card) return G.STATE == G.STATES.SELECTING_HAND and G.GAME.chips < G.GAME.blind.chips end,
-    
-    cotc_credits = {
-        art = "Amber N. Q.",
-        code = "Amber N. Q."
-    }
 }
 
 -- Damned Dice --
@@ -137,11 +132,6 @@ SMODS.Consumable {
 	end,
 	
 	can_use = function(self, card) return G.STATE == G.STATES.SELECTING_HAND and G.GAME.chips < G.GAME.blind.chips end,
-
-    cotc_credits = {
-        art = "Amber N. Q.",
-        code = "Amber N. Q."
-    }
 }
 
 -- Default Dice --
@@ -200,9 +190,4 @@ SMODS.Consumable {
     end,
 
     can_use = function(self, card) return G.STATE == G.STATES.SELECTING_HAND end,
-
-    cotc_credits = {
-        art = "Amber N. Q.",
-        code = "Amber N. Q."
-    }
 }

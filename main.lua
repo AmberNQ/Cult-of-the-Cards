@@ -254,106 +254,12 @@ end
 
 function G.FUNCS.cotc_steam(e) love.system.openURL("https://store.steampowered.com/app/1313140/Cult_of_the_Lamb") end
 
--- Credits Badge(stolen from Cold Beans who stole it from Hot Potato) --
-
-CultCards = SMODS.current_mod
-local cotccb = SMODS.create_mod_badges
-function SMODS.create_mod_badges(obj, badges)
-	cotccb(obj, badges)
-	if not SMODS.config.no_mod_badges and obj and obj.cotc_credits then
-		local function calc_scale_fac(text)
-			local size = 0.9
-			local font = G.LANG.font
-			local max_text_width = 2 - 2 * 0.05 - 4 * 0.03 * size - 2 * 0.03
-			local calced_text_width = 0
-			-- Math reproduced from DynaText:update_text
-			for _, c in utf8.chars(text) do
-				local tx = font.FONT:getWidth(c) * (0.33 * size) * G.TILESCALE * font.FONTSCALE
-					+ 2.7 * 1 * G.TILESCALE * font.FONTSCALE
-				calced_text_width = calced_text_width + tx / (G.TILESIZE * G.TILESCALE)
-			end
-			local scale_fac = calced_text_width > max_text_width and max_text_width / calced_text_width or 1
-			return scale_fac
-		end
-		if obj.cotc_credits.art or obj.cotc_credits.shader or obj.cotc_credits.code then
-			local scale_fac = {}
-			local min_scale_fac = 1
-			local strings = { CultCards.display_name }
-			for _, v in ipairs({ "art", "shader", "code" }) do
-				if obj.cotc_credits[v] then
-					if type(obj.cotc_credits[v]) == "string" then obj.cotc_credits[v] = { obj.cotc_credits[v] } end
-					for i = 1, #obj.cotc_credits[v] do
-						strings[#strings + 1] =
-							localize({ type = "variable", key = "cotc_" .. v, vars = { obj.cotc_credits[v][i] } })
-							[1]
-					end
-				end
-			end
-			if obj.cotc_credits.custom then
-				strings[#strings + 1] = localize({ type = "variable", key = obj.cotc_credits.custom.key, vars = { obj.cotc_credits.custom.text } })
-			end
-			for i = 1, #strings do
-				scale_fac[i] = calc_scale_fac(strings[i])
-				min_scale_fac = math.min(min_scale_fac, scale_fac[i])
-			end
-			local ct = {}
-			for i = 1, #strings do
-				ct[i] = {
-					string = strings[i],
-				}
-			end
-			for i = 1, #badges do
-				if badges[i].nodes[1].nodes[2].config.object.string == CultCards.display_name then
-					badges[i].nodes[1].nodes[2].config.object:remove()
-					badges[i] = {
-						n = G.UIT.R,
-						config = { align = "cm" },
-						nodes = {
-							{
-								n = G.UIT.R,
-								config = {
-									align = "cm",
-									colour = CultCards.badge_colour,
-									r = 0.1,
-									minw = 2 / min_scale_fac,
-									minh = 0.36,
-									emboss = 0.05,
-									padding = 0.03 * 0.9,
-								},
-								nodes = {
-									{ n = G.UIT.B, config = { h = 0.1, w = 0.03 } },
-									{
-										n = G.UIT.O,
-										config = {
-											object = DynaText({
-												string = ct or "ERROR",
-												colours = { obj.cotc_credits and obj.cotc_credits.text_colour or HEX("FF0000") },
-												silent = true,
-												float = true,
-												shadow = true,
-												offset_y = -0.03,
-												spacing = 1,
-												scale = 0.33 * 0.9,
-											}),
-										},
-									},
-									{ n = G.UIT.B, config = { h = 0.1, w = 0.03 } },
-								},
-							},
-						},
-					}
-					break
-				end
-			end
-		end
-	end
-end
-
 -- File Indexes --
 
 local file_groups = {
 	"src",
 	"jokers",
+	"decks",
 	"tarots",
 	"relics",
 	"blinds"
@@ -365,7 +271,6 @@ local files = {
 
 		"credits",
 		"achievements",
-		"decks",
 		"vouchers",
 		"editions",
 		"tags",
@@ -379,6 +284,11 @@ local files = {
 
 		--"lamb",
 		--"resurrection"
+	},
+
+	decks = {
+		"golden",
+		"berserker"
 	},
 
 	tarots = {

@@ -187,9 +187,4 @@ SMODS.Consumable {
     can_use = function(self, card)
         return G.jokers and #G.jokers.cards > 0
     end,
-
-    cotc_credits = {
-        art = "Sgt. Death",
-        code = "Amber N. Q."
-    }
 }

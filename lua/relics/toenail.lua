@@ -29,9 +29,4 @@ SMODS.Consumable {
     can_use = function(self, card)
         return true
     end,
-
-    cotc_credits = {
-        art = "Sgt. Death",
-        code = "Amber N. Q."
-    }
 }

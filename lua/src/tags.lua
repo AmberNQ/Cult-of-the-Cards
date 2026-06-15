@@ -32,11 +32,6 @@ SMODS.Tag {
     in_pool = function(self, args)
         return G.P_CENTERS["e_cotc_bane"].discovered
     end,
-
-    cotc_credits = {
-        art = "Amber N. Q.",
-        code = "Amber N. Q."
-    }
 }
 
 --Vampiric Tag
@@ -73,11 +68,6 @@ SMODS.Tag {
     in_pool = function(self, args)
         return G.P_CENTERS["e_cotc_vampiric"].discovered
     end,
-
-    cotc_credits = {
-        art = "Amber N. Q.",
-        code = "Amber N. Q."
-    }
 }
 
 --Necromatic Tag
@@ -114,11 +104,6 @@ SMODS.Tag {
     in_pool = function(self, args)
         return G.P_CENTERS["e_cotc_necro"].discovered
     end,
-
-    cotc_credits = {
-        art = "Amber N. Q.",
-        code = "Amber N. Q."
-    }
 }
 
 --Zealous Tag
@@ -155,11 +140,6 @@ SMODS.Tag {
     in_pool = function(self, args)
         return G.P_CENTERS["e_cotc_zealous"].discovered
     end,
-
-    cotc_credits = {
-        art = "Amber N. Q.",
-        code = "Amber N. Q."
-    }
 }
 
 --Merciless Tag
@@ -196,11 +176,6 @@ SMODS.Tag {
     in_pool = function(self, args)
         return G.P_CENTERS["e_cotc_merciless"].discovered
     end,
-
-    cotc_credits = {
-        art = "Amber N. Q.",
-        code = "Amber N. Q."
-    }
 }
 
 --Godly Tag
@@ -237,9 +212,4 @@ SMODS.Tag {
     in_pool = function(self, args)
         return G.P_CENTERS["e_cotc_godly"].discovered
     end,
-
-    cotc_credits = {
-        art = "Amber N. Q.",
-        code = "Amber N. Q."
-    }
 }

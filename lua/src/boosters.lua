@@ -24,11 +24,6 @@ SMODS.Booster {
     create_card = function(self, card, i)
         return { set = "cotc_Relic", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "cotc_temple" }
     end,
-
-    cotc_credits = {
-        art = "N/A",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Booster {
@@ -57,11 +52,6 @@ SMODS.Booster {
     create_card = function(self, card, i)
         return { set = "cotc_Relic", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "cotc_temple" }
     end,
-
-    cotc_credits = {
-        art = "N/A",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Booster {
@@ -89,11 +79,6 @@ SMODS.Booster {
     create_card = function(self, card, i)
         return { set = "cotc_Relic", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "cotc_temple" }
     end,
-
-    cotc_credits = {
-        art = "N/A",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Booster {
@@ -121,11 +106,6 @@ SMODS.Booster {
     create_card = function(self, card, i)
         return { set = "cotc_Relic", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "cotc_temple" }
     end,
-
-    cotc_credits = {
-        art = "N/A",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Booster {
@@ -154,11 +134,6 @@ SMODS.Booster {
     create_card = function(self, card, i)
         return { set = "cotc_Tarot", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "cotc_temple" }
     end,
-
-    cotc_credits = {
-        art = "N/A",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Booster {
@@ -187,11 +162,6 @@ SMODS.Booster {
     create_card = function(self, card, i)
         return { set = "cotc_Tarot", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "cotc_temple" }
     end,
-
-    cotc_credits = {
-        art = "N/A",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Booster {
@@ -219,11 +189,6 @@ SMODS.Booster {
     create_card = function(self, card, i)
         return { set = "cotc_Tarot", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "cotc_temple" }
     end,
-
-    cotc_credits = {
-        art = "N/A",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Booster {
@@ -251,9 +216,4 @@ SMODS.Booster {
     create_card = function(self, card, i)
         return { set = "cotc_Tarot", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "cotc_temple" }
     end,
-
-    cotc_credits = {
-        art = "N/A",
-        code = "Amber N. Q."
-    }
 }

@@ -97,7 +97,7 @@
 - Added Deck of the Berserker
   - Based on the Fleece of the berseker, X10 Mult, but start with 1 hand and 0 discards.
 
-## V 0.0.9 // FINAL Final Stages, for real this time
+## V 0.0.9-ALPHA // FINAL Final Stages, for real this time
 
 - Updated Mod Credits
 
@@ -142,3 +142,9 @@
 - Added Temple and Premonition Booster packs
 
 - Added Unlock condition to the Deck of the Berserker (reach Ante 20)
+
+## V 0.1.0
+
+- Fixed a visual bug with the Golden Deck where it wouldnt update the Mult count.
+
+- Removed mod badge credits. a shame i had to because i liked the way it looked but sadly it no longer works on recent SMODS versions.

@@ -20,11 +20,6 @@ SMODS.Consumable {
     end,
 
     can_use = function(self, card) return true end,
-
-    cotc_credits = {
-        art = "Amber N. Q.",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Consumable {
@@ -49,11 +44,6 @@ SMODS.Consumable {
     end,
 
     can_use = function(self, card) return true end,
-
-    cotc_credits = {
-        art = "Amber N. Q.",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Consumable {
@@ -78,9 +68,4 @@ SMODS.Consumable {
     end,
 
     can_use = function(self, card) return true end,
-
-    cotc_credits = {
-        art = "Amber N. Q.",
-        code = "Amber N. Q."
-    }
 }

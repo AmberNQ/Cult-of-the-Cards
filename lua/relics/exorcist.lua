@@ -81,9 +81,4 @@ SMODS.Consumable {
     end,
 
     can_use = function(self, card) return G.GAME.consumeable_buffer < G.consumeables.config.card_limit end,
-
-    cotc_credits = {
-        art = "Sgt. Death",
-        code = "Amber N. Q."
-    }
 }

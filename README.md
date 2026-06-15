@@ -91,7 +91,7 @@ Find yourself against the Bishops of the Old Faith once more in this expansion o
 ## [Tumblr](https://www.tumblr.com/amberanimatez)
 
 # Disclaimer:
-the art used for the dividers in this README file (aside from the logos with the mod' s name) is not mine and belongs to Massive Monster and their respective artists. These files can be replaced or even removed at their request. 
+the art used for the dividers in this README file (aside from the logos with the mod's name) is not mine and belongs to Massive Monster and their respective artists. These files can be replaced or even removed at their request. 
 
 All characters and objects referenced in this mod belong to Massive Monster.
 

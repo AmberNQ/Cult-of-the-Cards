@@ -11,11 +11,6 @@ SMODS.Voucher {
             end
         }))
     end,
-
-    cotc_credits = {
-        art = "Sgt. Death",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Voucher {
@@ -31,9 +26,4 @@ SMODS.Voucher {
             end
         }))
     end,
-
-    cotc_credits = {
-        art = "Sgt. Death",
-        code = "Amber N. Q."
-    }
 }

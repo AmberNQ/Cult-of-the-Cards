@@ -16,7 +16,7 @@ return {
                     "consecutive {C:attention}Blind{},",
                     "resets if Blind is {C:attention}skipped",
                     "{X:mult,C:white}X#3#{} base Blind size",
-                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                    "{C:inactive}(Currently {C:mult}+#4#{C:inactive} Mult)"
                 }
             },
             b_cotc_berserk = {
@@ -1150,10 +1150,7 @@ return {
         suits_plural = {},
         suits_singular = {},
         tutorial = {},
-        v_dictionary = {
-			cotc_art = { "Art: #1#" },
-			cotc_code = { "Code: #1#" },
-        },
+        v_dictionary = {},
         v_text = {},
     }
 }

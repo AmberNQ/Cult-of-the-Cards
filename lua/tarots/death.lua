@@ -28,9 +28,4 @@ SMODS.Consumable {
             SMODS.destroy_cards(card, nil, nil, true)
         end
     end,
-
-    cotc_credits = {
-        art = "Sgt. Death",
-        code = "Amber N. Q."
-    }
 }

@@ -52,9 +52,4 @@ SMODS.Consumable {
     can_use = function(self, card)
         if G.GAME.blind.in_blind then return true end
     end,
-
-    cotc_credits = {
-        art = "Sgt. Death",
-        code = "Amber N. Q."
-    }
 }

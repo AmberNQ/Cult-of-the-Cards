@@ -31,11 +31,6 @@ SMODS.Edition {
             end
         end
     end,
-
-    cotc_credits = {
-        shader = "Metanite64",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Edition {
@@ -65,11 +60,6 @@ SMODS.Edition {
             end
         end
     end,
-
-    cotc_credits = {
-        shader = "Metanite64",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Edition {
@@ -107,11 +97,6 @@ SMODS.Edition {
             }
         end
     end,
-
-    cotc_credits = {
-        shader = "Metanite64",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Edition {
@@ -137,11 +122,6 @@ SMODS.Edition {
             }
         end
     end,
-
-    cotc_credits = {
-        shader = "Metanite64",
-        code = "Amber N. Q.",
-    }
 }
 
 SMODS.Edition {
@@ -166,11 +146,6 @@ SMODS.Edition {
             }
         end
     end,
-
-    cotc_credits = {
-        shader = "Metanite64",
-        code = "Amber N. Q."
-    }
 }
 
 SMODS.Edition {
@@ -193,9 +168,4 @@ SMODS.Edition {
             }
         end
     end,
-
-    cotc_credits = {
-        shader = "Metanite64",
-        code = "Amber N. Q."
-    }
 }
