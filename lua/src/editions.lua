@@ -40,7 +40,7 @@ SMODS.Edition {
     weight = 18,
     extra_cost = 3,
     config = {
-        odds = 2,
+        odds = 4,
         hands = 1
     },
 
@@ -85,18 +85,20 @@ SMODS.Edition {
             card:juice_up(.4,.4)
         end
 
-        if context.setting_blind and SMODS.pseudorandom_probability(card, 'cotc_necro', 1, card.edition.odds) then
-            G.GAME.chips = G.GAME.chips + card.edition.chips
-            card:juice_up(.4,.4)
-            if G.GAME.chips >= G.GAME.blind.chips then
-                G.STATE = G.STATES.HAND_PLAYED
-                G.STATE_COMPLETE = true
-                end_round()
+        if card.edition.chips > 0 then
+            if context.setting_blind and SMODS.pseudorandom_probability(card, 'cotc_necro', 1, card.edition.odds) then
+                G.GAME.chips = G.GAME.chips + card.edition.chips
+                card:juice_up(.4,.4)
+                if G.GAME.chips >= G.GAME.blind.chips then
+                    G.STATE = G.STATES.HAND_PLAYED
+                    G.STATE_COMPLETE = true
+                    end_round()
+                end
+                return {
+                    message = localize("k_cotc_hit"),
+                    colour = G.C.EDITION
+                }
             end
-            return {
-                message = localize("k_cotc_hit"),
-                colour = G.C.EDITION
-            }
         end
     end,
 }

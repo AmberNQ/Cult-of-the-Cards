@@ -4,7 +4,7 @@ SMODS.ConsumableType{
     secondary_colour = HEX('E42727'),
     collection_rows = { 5, 6 },
     default = "c_cotc_hearts",
-    shop_rate = 1.5,
+    shop_rate = 0.5,
 }
 
 SMODS.Atlas {

@@ -143,8 +143,18 @@
 
 - Added Unlock condition to the Deck of the Berserker (reach Ante 20)
 
-## V 0.1.0
+## V 0.1.0 - V 0.1.0a // Kicking off the Cult
 
 - Fixed a visual bug with the Golden Deck where it wouldnt update the Mult count.
 
-- Removed mod badge credits. a shame i had to because i liked the way it looked but sadly it no longer works on recent SMODS versions.
+- Removed mod badge credits. A shame i had to because i liked the way it looked but sadly it no longer works on recent SMODS versions and i cant figure out a fix.
+
+- Added edition shaders.
+
+- Reduced chances of Pelt Tarots appearing in the shop.
+
+- Fixed Death's Door to animate on your last hand, showing that it is automatically activated.
+
+- Fixed Necromatic to make sure it doesnt display the "Hit!" message if it does not add chips to score.
+
+SUSPECTED ISSUE: Custom editions were made with Jokers in mind first and foremost. if you find a playing card with a non standard shader, report any bugs to any of the devs.

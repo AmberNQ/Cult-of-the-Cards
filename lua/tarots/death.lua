@@ -6,6 +6,7 @@ SMODS.Consumable {
     cost = 5,
     config = {
         immutable = {
+            selected = false,
             used = false
         },
         extra = {
@@ -18,6 +19,10 @@ SMODS.Consumable {
     end,
 
     calculate = function(self, card, context)
+        if context.joker_main and G.GAME.current_round.hands_left == 1 then
+            card.ability.immutable.selected = true
+            ToggleRelic(card)
+        end
         if context.joker_main and G.GAME.current_round.hands_left == 0 then
             card.ability.immutable.used = true
             return {
