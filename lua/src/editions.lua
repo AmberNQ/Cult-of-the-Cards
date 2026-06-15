@@ -194,6 +194,11 @@ SMODS.Edition {
     }
 }
 
+SMODS.Shader {
+    key = "godly",
+    path = "godly.fs"
+}
+
 SMODS.Edition {
     key = "godly",
     shader = "godly",
