@@ -1,8 +1,3 @@
-SMODS.Shader {
-    key = "bane",
-    path = "bane.fs"
-}
-
 SMODS.Edition {
     key = "bane",
     shader = "bane",
@@ -42,11 +37,6 @@ SMODS.Edition {
         shader = "Metanite64",
         code = "Amber N. Q."
     }
-}
-
-SMODS.Shader {
-    key = "vampiric",
-    path = "vampiric.fs"
 }
 
 SMODS.Edition {
@@ -126,11 +116,6 @@ SMODS.Edition {
     }
 }
 
-SMODS.Shader {
-    key = "zealous",
-    path = "zealous.fs"
-}
-
 SMODS.Edition {
     key = "zealous",
     shader = "zealous",
@@ -161,10 +146,7 @@ SMODS.Edition {
         code = "Amber N. Q.",
     }
 }
-SMODS.Shader {
-    key = "merciless",
-    path = "merciless.fs"
-}
+
 SMODS.Edition {
     key = "merciless",
     shader = "merciless",
@@ -192,11 +174,6 @@ SMODS.Edition {
         shader = "Metanite64",
         code = "Amber N. Q."
     }
-}
-
-SMODS.Shader {
-    key = "godly",
-    path = "godly.fs"
 }
 
 SMODS.Edition {

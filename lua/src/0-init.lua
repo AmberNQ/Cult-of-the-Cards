@@ -75,6 +75,36 @@ SMODS.Atlas {
     py = 66
 }
 
+SMODS.Shader {
+	key = "bane",
+	path = "bane.fs"
+}
+
+SMODS.Shader {
+	key = "vampiric",
+	path = "vampiric.fs"
+}
+
+SMODS.Shader {
+	key = "necro",
+	path = "necro.fs"
+}
+
+SMODS.Shader {
+	key = "zealous",
+	path = "zealous.fs"
+}
+
+SMODS.Shader {
+	key = "merciless",
+	path = "merciless.fs"
+}
+
+SMODS.Shader {
+	key = "godly",
+	path = "godly.fs"
+}
+
 -- ====================DECKSKINS====================
 
 SMODS.Atlas {
