@@ -16,7 +16,7 @@ SMODS.Consumable {
 
     loc_vars = function(self, info_queue, card)
         local kings = 0
-        for _, v in ipairs(G.playing_cards) do
+        for _, v in ipairs(G.playing_cards or {}) do
             if v:get_id() == 13 then
                 kings = kings + 1
             end
@@ -39,7 +39,7 @@ SMODS.Consumable {
     calculate = function(self, card, context)
         if context.joker_main and card.ability.immutable.selected then
             local kings = 0
-            for _, v in ipairs(G.playing_cards) do
+            for _, v in ipairs(G.playing_cards or {}) do
                 if v:get_id() == 13 then
                     kings = kings + 1
                 end

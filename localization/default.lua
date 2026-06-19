@@ -282,6 +282,13 @@ return {
                     quote.."Hope to be turned away."
                 }
             },
+            c_cotc_frozen = {
+                name = "Frozen",
+                text = {
+                    "Not Sure Yet",
+                    quote.."Held still between heartbeats."
+                }
+            },
             c_cotc_hand = {
                 name = "Hands of Rage",
                 text = {
@@ -313,6 +320,13 @@ return {
                     quote.."A major remedy."
                 }
             },
+            c_cotc_neptune = {
+                name = "Neptune's Curse",
+                text = {
+                    "Not Sure Yet",
+                    quote.."Send 'em to sleep with the fishes."
+                }
+            }
         },
         cotc_Relic = {
             c_cotc_aethrile = {
@@ -783,9 +797,16 @@ return {
                     quote.."Not solid, nor liquid, nor smoke..."
                 }
             },
+            c_cotc_pelt = {
+                name = "Pelt of the Lost Kin",
+                text = {
+                    "Not Sure Yet",
+                    quote.."Twas not enough to keep them warm."
+                }
+            },
             c_cotc_scales = {
                 name = {
-                    "Scales of ",
+                    "Scales of",
                     "the Anchorite"
                 },
                 text = {
@@ -1122,11 +1143,12 @@ return {
             k_temple_pack = "Temple Pack",
             k_pelt_pack = "Premonition Pack",
             k_cotc_hit = "Hit!",
-            ph_cotc_mercy = "What kind of God are you...?",
+            ph_cotc_mercy = "What kind of God are y-you...?",
             cotc_title = "Cult of the Cards",
             cotc_credits_lead = "Mod by ",
             cotc_credits_shaders = "Shaders by ",
-            cotc_credits_art = "Art by ",
+            cotc_credits_art1 = "(most) ",
+            cotc_credits_art2 = "Art by ",
             cotc_credits_thanks = "Special Thanks to ",
             cotc_credits_local = "Localizations:",
             cotc_credits_join = "Join the Cult",

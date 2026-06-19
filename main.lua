@@ -11,8 +11,6 @@
 
 - Add Localizations(NOT A PRIORITY)
 
-- Add Edition Shaders										[🔃]
-
 - Add Relic Recharge system.								[🔃]
 	- Relics have a charge time based on internal config variable. 
 	function checks number of rounds that have passed and if the difference is equal to charge time, 
@@ -50,6 +48,8 @@
 - Leshy changes the card but they still score the same.
 
 - Necromatic safeguard causes card hand to bug out.
+
+- Optional SMODS individual weight system makes this mod crash the game on opening a shop.
 ]]
 
 -- ====================META=DATA====================
@@ -121,7 +121,8 @@ SMODS.current_mod.custom_ui = function(mod_nodes)
 						} },
 						{ n = G.UIT.R, nodes = { { n = G.UIT.B, config = { h = 0.75, w = 0.1 } } } },
 						{ n = G.UIT.R, config = { align = "cl"}, nodes = {
-							{ n = G.UIT.T, config = { text = localize("cotc_credits_art"), scale = .4, colour = G.C.WHITE } },
+							{ n = G.UIT.T, config = { text = localize("cotc_credits_art1"), scale = .25, colour = G.C.UI.TEXT_INACTIVE } },
+							{ n = G.UIT.T, config = { text = localize("cotc_credits_art2"), scale = .4, colour = G.C.WHITE } },
 							{ n = G.UIT.T, config = { text = "Sargeant Death", scale = .4, colour = G.C.UI.TEXT_INACTIVE } }
 						} },
 						{ n = G.UIT.R, nodes = { { n = G.UIT.B, config = { h = 0.75, w = 0.1 } } } },
@@ -297,6 +298,7 @@ local files = {
 		"hearts",
 		"boon",
 		"hand",
+		"neptune",
 		"death"
 	},
 
@@ -309,10 +311,10 @@ local files = {
 		--"hair",
 		"laplace",
 		--"balm",
-		--"ala",
+		"ala",
 		"exorcist",
 		--"aethrile",
-		--"tears",
+		"tears",
 
 		--[BASIC RELICS]
 		--"galvar",
@@ -326,7 +328,7 @@ local files = {
 		"shoe",
 		--"transmogricon",
 		"toenail",
-		--"fingernail",
+		"fingernail",
 		--"shunrue",
 		--"bomb",
 		--"stihi",
@@ -378,19 +380,21 @@ local files_dlc = {
 		--"joker"
 	},
 
-	tarots = { },
+	tarots = {
+		"frozen"
+	},
 
 	relics = {
-		--[["idol",
-		"first_din",
-		"second_din",
-		"amber",
+		--"idol",
+		--"first_din",
+		--"second_din",
+		--"amber",
 		"pelt",
-		"trapper",
-		"unmoved",
-		"husk",
-		"cinderfolk_spine",
-		"cinderfolk_eye",]]
+		--"trapper",
+		--"unmoved",
+		--"husk",
+		--"cinderfolk_spine",
+		--"cinderfolk_eye",
 	},
 
 	blinds = {
@@ -407,7 +411,7 @@ for _, v in ipairs(file_groups) do
 		assert(SMODS.load_file("lua/"..v.."/"..v2..".lua"))()
 	end
 
-	if SMODS.Mods["CultCards"].config.dlc_toggle then
+	if SMODS.Mods["CultCards"].config.dlc_toggle and files_dlc[v] then
 		for _, v2 in ipairs(files_dlc[v]) do
 			assert(SMODS.load_file("lua/"..v.."/"..v2..".lua"))()
 		end

@@ -67,7 +67,7 @@
 - Updated mod menu
 
 - Finished the other three Editions
-  - Necromatic: 1 in 5 chance to add previous blind's requirement to chips.
+  - Necromantic: 1 in 5 chance to add previous blind's requirement to chips.
   - Zealous: $5 for each used discard.
   - Merciless: 1 in 3 chance of X5 Mult.
 - NOTE: Shaders for these editions are currently in progress. please be patient.
@@ -143,7 +143,7 @@
 
 - Added Unlock condition to the Deck of the Berserker (reach Ante 20)
 
-## V 0.1.0 - V 0.1.0a // Kicking off the Cult
+## V 0.1.0 // Kicking off the Cult
 
 - Fixed a visual bug with the Golden Deck where it wouldnt update the Mult count.
 
@@ -155,6 +155,14 @@
 
 - Fixed Death's Door to animate on your last hand, showing that it is automatically activated.
 
-- Fixed Necromatic to make sure it doesnt display the "Hit!" message if it does not add chips to score.
+- Fixed Necromantic to make sure it doesnt display the "Hit!" message if it does not add chips to score.
 
 SUSPECTED ISSUE: Custom editions were made with Jokers in mind first and foremost. if you find a playing card with a non standard shader, report any bugs to any of the devs.
+
+## V 0.1.0-E
+
+- Fixed a bug on newer versions of SMODS where woolhaven content would cause an instant crash if toggled on.
+
+- Fixed a bug where Seal of the Bishops would crash the game if hovered over without starting at least one run since boot.
+
+- Updated Relic atlases
